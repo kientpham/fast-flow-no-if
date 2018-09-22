@@ -39,6 +39,7 @@ public abstract class AbstractWorkflow<D> {
 		for (AbstractTransactionModel transaction : transactionList) {
 			this.executeProcess(transaction);
 		}
+		
 		message = "END process request successfully: " + requestModel.toString();
 		log.info(message);
 		return message;
@@ -50,7 +51,7 @@ public abstract class AbstractWorkflow<D> {
 			while (builder != null) {
 				builder.execute(transaction, builderDTO);
 				builder = builder.getNextBuilder();
-			}
+			}			
 			transaction.saveTransaction();
 		} catch (ServiceException e) {
 			transaction.saveWithError(e);
