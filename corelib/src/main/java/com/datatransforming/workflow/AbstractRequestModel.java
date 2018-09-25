@@ -2,9 +2,32 @@ package com.datatransforming.workflow;
 
 import java.util.List;
 
-public abstract class AbstractRequestModel {
+import lombok.ToString;
 
-	public abstract List<AbstractTransactionModel> getTransactionByRequestValue() throws ServiceException;	
-	
-	public abstract String toString();
+/**
+ * 
+ * @author Kien Pham
+ * 
+ *         This class is the abstract model to send request for workflow.
+ *
+ */
+@ToString
+public abstract class AbstractRequestModel<D> {
+
+	public abstract List<AbstractTransactionModel> getTransactionByRequestValue() throws ServiceException;
+
+	public abstract AbstractWorkflow<D> getWorkflow();
+
+	public String processRequest() {
+		try {
+
+			List<AbstractTransactionModel> transactionList = this.getTransactionByRequestValue();
+			AbstractWorkflow<D> workflow = this.getWorkflow();
+			workflow.processRequest(transactionList);
+		} catch (ServiceException e) {
+
+		}
+		return "";
+	}
+
 }
