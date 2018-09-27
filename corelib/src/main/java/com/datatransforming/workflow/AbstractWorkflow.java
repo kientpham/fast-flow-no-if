@@ -4,7 +4,6 @@ import java.util.List;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.extern.log4j.Log4j2;
 
 /**
  * This class is to run the common process for all factories
@@ -16,45 +15,38 @@ import lombok.extern.log4j.Log4j2;
  */
 @Getter
 @Setter
-@Log4j2
-public abstract class AbstractWorkflow<D> {
+public class AbstractWorkflow<D> {
 
 	private AbstractBuilder<D> firstBuilder;
 
-	private AbstractTransactionModel transaction;
+	private AbstractTransactionModel transactionModel;
 
 	private D builderDTO;
 
 	/**
 	 * This is for initiate concrete builders
 	 */
-	public abstract void initFactory();
+	// public abstract void initFactory();
 
-	public String processRequest(AbstractRequestModel requestModel) throws ServiceException {
-
-		String message = String.format("START process request $1s%", requestModel.toString());		
-		log.info(message);
-
-		List<AbstractTransactionModel> transactionList = requestModel.getTransactionByRequestValue();
+	/**
+	 * Go through each transaction to process
+	 * @param transactionList
+	 * @throws ServiceException
+	 */
+	public void processRequest(List<AbstractTransactionModel> transactionList) throws ServiceException {
+		AbstractBuilder<D> builder;
 		for (AbstractTransactionModel transaction : transactionList) {
-			this.executeProcess(transaction);
-		}
-		
-		message = "END process request successfully: " + requestModel.toString();
-		log.info(message);
-		return message;
-	}
-
-	public void executeProcess(AbstractTransactionModel transaction) throws ServiceException {
-		try {
-			AbstractBuilder<D> builder = firstBuilder;
-			while (builder != null) {
-				builder.execute(transaction, builderDTO);
-				builder = builder.getNextBuilder();
-			}			
-			transaction.saveTransaction();
-		} catch (ServiceException e) {
-			transaction.saveWithError(e);
+			try {
+				builder = firstBuilder;
+				while (builder != null) {
+					builder.execute(transaction, builderDTO);
+					builder = builder.getNextBuilder();
+				}
+			} catch (ServiceException e) {
+				transaction.saveWithError(e);
+			} finally {
+				transaction.saveTransaction();
+			}
 		}
 	}
 }
