@@ -2,9 +2,6 @@ package com.datatransforming.workflow;
 
 import java.util.List;
 
-import lombok.Getter;
-import lombok.Setter;
-
 /**
  * This class is to run the common process for all factories
  * 
@@ -13,20 +10,29 @@ import lombok.Setter;
  * @param <T>
  *            is for transaction of each factory
  */
-@Getter
-@Setter
 public class AbstractWorkflow<D> {
 
 	private AbstractBuilder<D> firstBuilder;
+	
+	public void setFirstBuilder(AbstractBuilder<D> firstBuilder){
+		this.firstBuilder=firstBuilder;
+	}
 
 	private AbstractTransactionModel transactionModel;
+	
+	public void setTransactionModel(AbstractTransactionModel transactionModel){
+		this.transactionModel=transactionModel;
+	}
+	
+	public AbstractTransactionModel  getTransactionModel(){
+		return this.transactionModel;
+	}
 
 	private D builderDTO;
-
-	/**
-	 * This is for initiate concrete builders
-	 */
-	// public abstract void initFactory();
+	
+	public void setBuilderDTO(D builderDTO){
+		this.builderDTO=builderDTO;
+	}
 
 	/**
 	 * Go through each transaction to process

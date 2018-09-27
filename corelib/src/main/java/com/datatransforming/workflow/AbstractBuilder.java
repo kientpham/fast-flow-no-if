@@ -1,19 +1,22 @@
 package com.datatransforming.workflow;
 
-import lombok.Getter;
-import lombok.Setter;
-
 /**
  * 
  * @author Kien Pham
  *
  * @param <T>
  */
-@Getter
-@Setter
 public abstract class AbstractBuilder<D>
 {
   private AbstractBuilder<D> nextBuilder;  
+  
+  public void setNextBuilder(AbstractBuilder<D> nextBuilder){
+	  this.nextBuilder=nextBuilder;
+  }
+  
+  public AbstractBuilder<D> getNextBuilder(){
+	  return this.nextBuilder;
+  }
 
   /**
    * 
