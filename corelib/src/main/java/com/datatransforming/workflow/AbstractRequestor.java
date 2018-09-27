@@ -3,6 +3,7 @@ package com.datatransforming.workflow;
 import java.util.List;
 
 import lombok.ToString;
+import lombok.extern.log4j.Log4j2;
 
 /**
  * 
@@ -12,22 +13,27 @@ import lombok.ToString;
  *
  */
 @ToString
-public abstract class AbstractRequestModel<D> {
+@Log4j2
+public abstract class AbstractRequestor<D> {
 
 	public abstract List<AbstractTransactionModel> getTransactionByRequestValue() throws ServiceException;
 
 	public abstract AbstractWorkflow<D> getWorkflow();
 
-	public String processRequest() {
+	/**
+	 * 
+	 * @return message
+	 */
+	public List<AbstractTransactionModel> processRequest() {
+		log.info("START WORKFLOW: " + this.toString());		
+		List<AbstractTransactionModel> transactionList = null;
 		try {
-
-			List<AbstractTransactionModel> transactionList = this.getTransactionByRequestValue();
+			transactionList = this.getTransactionByRequestValue();
 			AbstractWorkflow<D> workflow = this.getWorkflow();
 			workflow.processRequest(transactionList);
 		} catch (ServiceException e) {
-
-		}
-		return "";
+			return null;
+		}		
+		return transactionList;
 	}
-
 }

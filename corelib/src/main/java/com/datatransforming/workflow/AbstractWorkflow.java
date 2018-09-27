@@ -28,8 +28,12 @@ public class AbstractWorkflow<D> {
 	 */
 	// public abstract void initFactory();
 
-	public String processRequest(List<AbstractTransactionModel> transactionList) throws ServiceException {
-
+	/**
+	 * Go through each transaction to process
+	 * @param transactionList
+	 * @throws ServiceException
+	 */
+	public void processRequest(List<AbstractTransactionModel> transactionList) throws ServiceException {
 		AbstractBuilder<D> builder;
 		for (AbstractTransactionModel transaction : transactionList) {
 			try {
@@ -38,13 +42,11 @@ public class AbstractWorkflow<D> {
 					builder.execute(transaction, builderDTO);
 					builder = builder.getNextBuilder();
 				}
-				transaction.saveTransaction();
 			} catch (ServiceException e) {
 				transaction.saveWithError(e);
+			} finally {
+				transaction.saveTransaction();
 			}
 		}
-
-		return "Test";// message;
 	}
-
 }
