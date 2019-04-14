@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ApplicationManifest ApplicationTypeName="base-webappApplicationType"
+	ApplicationTypeVersion="0.0.1-SNAPSHOT" xmlns="http://schemas.microsoft.com/2011/01/fabric"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Description>base-webapp Application</Description>
+	<Parameters>
+		<Parameter Name="placementConstraints" DefaultValue="(NodeTypeName==primary)"/>
+		<Parameter Name="instanceCount" DefaultValue="2"/>
+		<Parameter Name="JVMOPTS" DefaultValue=""/>			
+		<Parameter Name="spring.profiles.active" DefaultValue="cloud"/>
+		<Parameter Name="SPRING_APPLICATION_JSON" DefaultValue="" />
+		<Parameter Name="environment" DefaultValue=""/>
+		<Parameter Name="primaryLoadBalancerIP" DefaultValue="" />
+		<Parameter Name="registryLoadBalancerIP" DefaultValue="" />
+		<Parameter Name="appInsightsKey" DefaultValue="" />
+		<Parameter Name="keyVaultEnabled" DefaultValue="false" />
+		<Parameter Name="keyVaultBaseUrl" DefaultValue="" />
+		<Parameter Name="keyVaultSharedBaseUrl" DefaultValue="" />
+		<Parameter Name="keyVaultAppId" DefaultValue="" />
+		<Parameter Name="keyVaultAppSecret" DefaultValue="" />
+		<Parameter Name="keyVaultMonitorDelay" DefaultValue="300000" />
+		<Parameter Name="keyVaultMonitorEnabled" DefaultValue="false" />
+		<Parameter Name="subscriptionId" DefaultValue=""/>
+		<Parameter Name="thumbprint" DefaultValue=""/>
+		<Parameter Name="encrypted" DefaultValue="false"/>
+		<Parameter Name="timestamp" DefaultValue=""/>
+		<Parameter Name="xmx" DefaultValue="1024"/>
+		<Parameter Name="xms" DefaultValue="1024"/>
+		<Parameter Name="maxMetaspaceSize" DefaultValue="256"/>
+	</Parameters>
+	<ServiceManifestImport>
+		<ServiceManifestRef ServiceManifestName="base-webappPkg"
+			ServiceManifestVersion="0.0.1-SNAPSHOT" />
+		<EnvironmentOverrides CodePackageRef="Code">
+			<EnvironmentVariable Name="JVMOPTS"
+				Value="[JVMOPTS]"/>
+			<EnvironmentVariable Name="spring.profiles.active"
+				Value="[spring.profiles.active]"/>
+			<EnvironmentVariable Name="SPRING_APPLICATION_JSON"
+				Value="[SPRING_APPLICATION_JSON]" />
+			<EnvironmentVariable Name="ENVIRONMENT"
+				Value="[environment]"/>
+			<EnvironmentVariable Name="CLUSTER_PRIMARY_LOADBALANCER"
+				Value="[primaryLoadBalancerIP]" />
+			<EnvironmentVariable Name="CLUSTER_REGISTRY_LOADBALANCER"
+				Value="[registryLoadBalancerIP]" />
+			<EnvironmentVariable Name="APPLICATION_INSIGHTS_IKEY"
+				Value="[appInsightsKey]" />
+			<EnvironmentVariable Name="KEYVAULT_ENABLED"
+				Value="[keyVaultEnabled]" />
+			<EnvironmentVariable Name="KEYVAULT_BASEURL"
+				Value="[keyVaultBaseUrl]" />
+			<EnvironmentVariable Name="KEYVAULT_SHAREDBASEURL"
+				Value="[keyVaultSharedBaseUrl]" />
+			<EnvironmentVariable Name="KEYVAULT_APPID" 
+				Value="[keyVaultAppId]" />
+			<EnvironmentVariable Name="KEYVAULT_APPSECRET"
+				Value="[keyVaultAppSecret]" />
+			<EnvironmentVariable Name="KEYVAULT_MONITOR_DELAY"
+				Value="[keyVaultMonitorDelay]" />
+			<EnvironmentVariable Name="KEYVAULT_MONITOR_ENABLED"
+				Value="[keyVaultMonitorEnabled]" />
+			<EnvironmentVariable Name="SUBSCRIPTION_ID"
+				Value="[subscriptionId]" />
+			<EnvironmentVariable Name="THUMBPRINT"
+				Value="[thumbprint]" />
+			<EnvironmentVariable Name="ENCRYPTED"
+				Value="[encrypted]" />	
+			<EnvironmentVariable Name="XMX"
+				Value="[xmx]" />	
+			<EnvironmentVariable Name="XMS"
+				Value="[xms]" />	
+			<EnvironmentVariable Name="MAX_METASPACE_SIZE"
+				Value="[maxMetaspaceSize]" />	
+		</EnvironmentOverrides>
+		<Policies>
+			<RunAsPolicy CodePackageRef="Code" UserRef="base-webappUser" />
+			<ServicePackageResourceGovernancePolicy CpuCores="0"/>
+      		<ResourceGovernancePolicy CodePackageRef="Code" MemoryInMB="1536" />
+		</Policies>
+	</ServiceManifestImport>
+	<DefaultServices>
+		<Service Name="base-webapp">
+			<StatelessService ServiceTypeName="base-webappServiceType"
+				InstanceCount="[instanceCount]">
+				<SingletonPartition />
+				<PlacementConstraints>[placementConstraints]</PlacementConstraints>
+			</StatelessService>
+		</Service>
+	</DefaultServices>
+	<Principals>
+		<Users>
+			<User Name="base-webappUser" AccountType="NetworkService" />
+		</Users>
+	</Principals>
+	<Policies>
+		<SecurityAccessPolicies>
+			<SecurityAccessPolicy ResourceRef="sf-data-encipherment-certificate" PrincipalRef="base-webappUser" ResourceType="Certificate" />
+		</SecurityAccessPolicies>
+	</Policies>
+	<Certificates>
+		<SecretsCertificate X509FindValue="[thumbprint]" Name="sf-data-encipherment-certificate" />
+	</Certificates>
+</ApplicationManifest>

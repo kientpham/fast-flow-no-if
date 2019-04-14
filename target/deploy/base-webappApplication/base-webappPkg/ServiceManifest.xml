@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ServiceManifest Name="base-webappPkg" Version="0.0.1-SNAPSHOT"
+	xmlns="http://schemas.microsoft.com/2011/01/fabric" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Description>Service that implements a base-webapp service
+	</Description>
+	<ServiceTypes>
+		<StatelessServiceType ServiceTypeName="base-webappServiceType"
+			UseImplicitHost="true" />
+	</ServiceTypes>
+	<CodePackage Name="Code" Version="0.0.1-SNAPSHOT">
+		<EntryPoint>
+			<ExeHost>
+				<Program>start.cmd</Program>
+				<Arguments></Arguments>
+				<WorkingFolder>CodePackage</WorkingFolder>
+				<ConsoleRedirection FileRetentionCount="5"
+					FileMaxSizeInKb="1024" />
+			</ExeHost>
+		</EntryPoint>
+		<EnvironmentVariables>
+			<EnvironmentVariable Name="JVMOPTS"
+				Value=""/>
+			<EnvironmentVariable Name="spring.profiles.active"
+				Value="cloud"/>
+			<EnvironmentVariable Name="SPRING_APPLICATION_JSON"
+				Value="" />
+			<EnvironmentVariable Name="ENVIRONMENT"
+				Value=""/>
+			<EnvironmentVariable Name="CLUSTER_PRIMARY_LOADBALANCER"
+				Value="" />
+			<EnvironmentVariable Name="CLUSTER_REGISTRY_LOADBALANCER"
+				Value="" />
+			<EnvironmentVariable Name="APPLICATION_INSIGHTS_IKEY"
+				Value="" />
+			<EnvironmentVariable Name="KEYVAULT_ENABLED"
+				Value="" />
+			<EnvironmentVariable Name="KEYVAULT_BASEURL"
+				Value="" />
+			<EnvironmentVariable Name="KEYVAULT_SHAREDBASEURL"
+				Value="" />
+			<EnvironmentVariable Name="KEYVAULT_APPID" Value="" />
+			<EnvironmentVariable Name="KEYVAULT_APPSECRET"
+				Value="" />
+			<EnvironmentVariable Name="KEYVAULT_MONITOR_DELAY"
+				Value="" />
+			<EnvironmentVariable Name="KEYVAULT_MONITOR_ENABLED"
+				Value="" />
+			<EnvironmentVariable Name="SUBSCRIPTION_ID"
+				Value="" />
+			<EnvironmentVariable Name="THUMBPRINT"
+				Value="" />
+			<EnvironmentVariable Name="ENCRYPTED"
+				Value="" />
+			<EnvironmentVariable Name="XMX"
+				Value="" />	
+			<EnvironmentVariable Name="XMS"
+				Value="" />	
+			<EnvironmentVariable Name="MAX_METASPACE_SIZE"
+				Value="" />	
+		</EnvironmentVariables>
+	</CodePackage>
+	<ConfigPackage Name="Config" Version="0.0.1-SNAPSHOT" />
+	<Resources>
+		<Endpoints>
+			<Endpoint Name="HTTPEndpoint" Protocol="https" UriScheme="https"
+				PathSuffix="/" Type="Input" />
+			<Endpoint Name="AdminEndpoint" Protocol="https" UriScheme="https"
+				PathSuffix="/" Type="Input" />
+		</Endpoints>
+	</Resources>
+</ServiceManifest>
+ 

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ServiceManifest Name="@project.artifactId@Pkg" Version="@project.version@"
+	xmlns="http://schemas.microsoft.com/2011/01/fabric" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Description>Service that implements a @project.artifactId@ service
+	</Description>
+	<ServiceTypes>
+		<StatelessServiceType ServiceTypeName="@project.artifactId@ServiceType"
+			UseImplicitHost="true" />
+	</ServiceTypes>
+	<CodePackage Name="Code" Version="@project.version@">
+		<EntryPoint>
+			<ExeHost>
+				<Program>start.cmd</Program>
+				<Arguments></Arguments>
+				<WorkingFolder>CodePackage</WorkingFolder>
+				<ConsoleRedirection FileRetentionCount="5"
+					FileMaxSizeInKb="1024" />
+			</ExeHost>
+		</EntryPoint>
+		<EnvironmentVariables>
+			<EnvironmentVariable Name="JVMOPTS"
+				Value=""/>
+			<EnvironmentVariable Name="spring.profiles.active"
+				Value="cloud"/>
+			<EnvironmentVariable Name="SPRING_APPLICATION_JSON"
+				Value="" />
+			<EnvironmentVariable Name="ENVIRONMENT"
+				Value=""/>
+			<EnvironmentVariable Name="CLUSTER_PRIMARY_LOADBALANCER"
+				Value="" />
+			<EnvironmentVariable Name="CLUSTER_REGISTRY_LOADBALANCER"
+				Value="" />
+			<EnvironmentVariable Name="APPLICATION_INSIGHTS_IKEY"
+				Value="" />
+			<EnvironmentVariable Name="KEYVAULT_ENABLED"
+				Value="" />
+			<EnvironmentVariable Name="KEYVAULT_BASEURL"
+				Value="" />
+			<EnvironmentVariable Name="KEYVAULT_SHAREDBASEURL"
+				Value="" />
+			<EnvironmentVariable Name="KEYVAULT_APPID" Value="" />
+			<EnvironmentVariable Name="KEYVAULT_APPSECRET"
+				Value="" />
+			<EnvironmentVariable Name="KEYVAULT_MONITOR_DELAY"
+				Value="" />
+			<EnvironmentVariable Name="KEYVAULT_MONITOR_ENABLED"
+				Value="" />
+			<EnvironmentVariable Name="SUBSCRIPTION_ID"
+				Value="" />
+			<EnvironmentVariable Name="THUMBPRINT"
+				Value="" />
+			<EnvironmentVariable Name="ENCRYPTED"
+				Value="" />
+			<EnvironmentVariable Name="XMX"
+				Value="" />	
+			<EnvironmentVariable Name="XMS"
+				Value="" />	
+			<EnvironmentVariable Name="MAX_METASPACE_SIZE"
+				Value="" />	
+		</EnvironmentVariables>
+	</CodePackage>
+	<ConfigPackage Name="Config" Version="@project.version@" />
+	<Resources>
+		<Endpoints>
+			<Endpoint Name="HTTPEndpoint" Protocol="@uri.scheme@" UriScheme="@uri.scheme@"
+				PathSuffix="/" Type="Input" />
+			<Endpoint Name="AdminEndpoint" Protocol="@uri.scheme@" UriScheme="@uri.scheme@"
+				PathSuffix="/" Type="Input" />
+		</Endpoints>
+	</Resources>
+</ServiceManifest>
+ 

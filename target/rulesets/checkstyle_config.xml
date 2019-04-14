@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+	  "-//Puppy Crawl//DTD Check Configuration 1.1//EN"
+	  "http://www.puppycrawl.com/dtds/configuration_1_1.dtd">
+
+<module name="Checker">
+  <!-- see http://checkstyle.sourceforge.net/config.html -->
+  <property name="severity" value="error"/>
+
+  <module name="Translation">
+    <property name="severity" value="warning"/>
+  </module>
+
+  <module name="FileLength">
+    <property name="max" value="3000"/>
+  </module>
+
+  <module name="SuppressWarningsFilter" />
+  
+  <module name="TreeWalker">
+    <property name="tabWidth" value="2" />
+    
+	<!-- =============================================== -->		                
+    <!-- Checks For Annotations -->
+    <!-- =============================================== -->
+	<module name="MissingDeprecated"/>
+	
+	<!-- Allow SupressWarnings -->
+	<module name="SuppressWarningsHolder" />
+
+    <!-- =============================================== -->		
+    <!-- Miscellaneous Checks -->
+    <!-- =============================================== -->		
+    <!-- eclipse will not automatically remove trailing whitespace -->		
+    <!--<module name="GenericIllegalRegexp">
+        <property name="format" value="\s$"/>
+      </module>-->
+    <module name="UpperEll"/>
+
+	
+    <!-- =============================================== -->		                
+    <!-- Checks For Imports -->
+    <!-- =============================================== -->				
+    <module name="AvoidStarImport"/>
+    <module name="IllegalImport"/>
+    <module name="RedundantImport"/>    
+    <module name="UnusedImports"/>	
+    <module name="AvoidStaticImport">
+    	<property name="excludes" value="java.lang.System.out,java.lang.Math.*,org.junit.Assert.*"/>
+    </module>
+    <!-- =============================================== -->		                
+    <!-- Checks For Coding Metrics -->
+    <!-- =============================================== -->
+	<module name="JavaNCSS">
+    	<property name="methodMaximum" value="250"/>
+	</module>
+    <!-- =============================================== -->		                
+    <!-- Checks For Naming Conventions -->
+    <!-- =============================================== -->		        
+    <module name="ConstantName"/>
+    <module name="LocalFinalVariableName"/>   
+    <module name="LocalVariableName"/>
+    <module name="MemberName"/>         
+    <module name="MethodName"/>        
+    <module name="PackageName"/>   
+    <module name="ParameterName"/>
+    <module name="StaticVariableName"/>            
+    <module name="TypeName"/>           
+    
+    <!-- =============================================== -->		        
+    <!-- Checks For Blocks -->
+    <!-- =============================================== -->				
+    <!--<module name="EmptyBlock"/>-->
+    <module name="LeftCurly">
+      <property name="option" value="nl"/>
+    </module>
+    <module name="RightCurly">
+      <property name="option" value="alone"/>
+    </module>  
+    <module name="EmptyBlock">
+    	<property name="option" value="text"/>
+	</module>  
+	<module name="AvoidNestedBlocks"/>
+    
+    <!-- =============================================== -->		        
+    <!-- Checks For Whitespace -->
+    <!-- =============================================== -->		        
+    <module name="EmptyForIteratorPad"/>
+    <module name="NoWhitespaceAfter">
+      <property name="tokens" value="BNOT, DEC, DOT, INC, LNOT, UNARY_MINUS, UNARY_PLUS "/>   
+      <property name="allowLineBreaks" value="true"/>
+    </module>
+
+    <module name="NoWhitespaceBefore"/>
+    <module name="NoWhitespaceBefore">
+      <property name="tokens" value="DOT"/>
+      <property name="allowLineBreaks" value="true"/>
+    </module>  
+    <module name="OperatorWrap">
+      <property name="tokens" value="ASSIGN, DIV_ASSIGN, PLUS_ASSIGN, MINUS_ASSIGN, STAR_ASSIGN, MOD_ASSIGN, SR_ASSIGN, BSR_ASSIGN, SL_ASSIGN, BXOR_ASSIGN, BOR_ASSIGN, BAND_ASSIGN"/>
+      <property name="option" value="eol"/>
+    </module>   
+
+    <!-- eclipse will not automatically convert tabs to space upon saving -->              
+    <module name="WhitespaceAfter">
+      <property name="tokens" value="COMMA, SEMI"/>
+    </module>
+    <!-- eclipse will not automatically add whitespace -->
+    <module name="Indentation">
+      <property name="severity" value="warning"/>
+      <property name="basicOffset" value="2"/>
+      <property name="braceAdjustment" value="0"/>
+      <property name="caseIndent" value="2"/>
+    </module>        	
+    
+    <!-- =============================================== -->		        
+    <!-- Checks For Coding Problems -->
+    <!-- =============================================== -->		        
+    <module name="EqualsHashCode"/>
+    <module name="IllegalInstantiation"/>   
+    <module name="InnerAssignment"/> 
+    <module name="SimplifyBooleanExpression"/>         
+    <module name="SimplifyBooleanReturn"/>   
+    <module name="MissingSwitchDefault"/>  
+    <module name="AvoidInlineConditionals"/>
+    <module name="EqualsAvoidNull"/>   
+
+	
+	<module name="InnerAssignment"/>
+	<module name="StringLiteralEquality"/>
+	<module name="SuperClone"/>
+	<module name="SuperFinalize"/>
+	<module name="IllegalThrows"/>
+	<module name="PackageDeclaration"/>
+	<module name="ReturnCount">
+    	<property name="max" value="5"/>
+	</module>
+
+	<!-- module name="ParameterAssignment"/> -->
+	<module name="DefaultComesLast"/>	
+
+
+	<module name="UnnecessaryParentheses"/>
+	
+    <!-- Checks that there are no "magic numbers", where a magic number is a numeric literal that is not defined as a constant. By default, -1, 0, 1, and 2 are not considered to be magic numbers -->
+    <!--<module name="MagicNumber"/>-->
+
+    <!-- =============================================== -->		        
+    <!-- Checks For Size Violations -->
+    <!-- =============================================== -->		        
+    <!--<module name="ParameterNumber"/>-->    
+    <module name="LineLength">
+      <property name="ignorePattern" value="^ *\* *[^ ]+$"/>
+      <property name="max" value="120"/>
+    </module>   
+    <!--module name="MethodLength">
+      <property name="max" value="250"/>
+    </module-->
+    
+
+    <!-- =============================================== -->		
+    <!-- Checks For Javadoc Comments -->
+    <!-- =============================================== -->				
+    <module name="JavadocType">
+      <property name="authorFormat" value="\S"/>
+      <property name="scope" value="package"/>
+    </module>
+    <module name="JavadocMethod">
+      <property name="allowUndeclaredRTE" value="true"/>
+      <property name="allowThrowsTagsForSubclasses" value="true"/>
+      <!-- The following two are true because this module
+           doesn't work properly. -->
+      <property name="allowMissingParamTags" value="true"/>
+      <property name="allowMissingReturnTag" value="true"/>                        
+      <property name="allowMissingThrowsTags" value="true"/>
+    </module>
+    <module name="JavadocVariable">
+      <property name="scope" value="public"/>
+    </module>   
+
+    <!-- =============================================== -->		
+    <!-- Modifier Checks -->        
+    <!-- =============================================== -->		        
+    <module name="ModifierOrder"/>       
+    
+    <!-- =============================================== -->		        
+    <!-- Class Design Checks -->
+    <!-- =============================================== -->				
+    <module name="VisibilityModifier"/>
+    <module name="FinalClass"/>
+	<module name="HideUtilityClassConstructor"/>
+	<module name="MutableException"/>
+	
+
+	    
+  </module>
+</module>

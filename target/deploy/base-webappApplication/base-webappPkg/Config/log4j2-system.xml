@@ -1,0 +1,31 @@
+<Configuration packages="com.microsoft.applicationinsights.Log4j">
+	<Properties>
+		<Property name="LOG_EXCEPTION_CONVERSION_WORD">%xwEx</Property>
+		<Property name="LOG_LEVEL_PATTERN">%5p</Property>
+		<Property name="LOG_PATTERN">%clr{%d{yyyy-MM-dd HH:mm:ss.SSS}}{faint} %clr{${LOG_LEVEL_PATTERN}} %clr{${sys:PID}}{magenta} %clr{---}{faint} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %m%n${sys:LOG_EXCEPTION_CONVERSION_WORD}</Property>
+		<Property name="LOG_PATTERN_OMS">%d{YYYY-MM-DD HH:MM:SS} ${sys:ENVIRONMENT:-null} ${sys:SERVICE_NAME} ${LOG_LEVEL_PATTERN} ${sys:PID} %t %c %m%n${sys:LOG_EXCEPTION_CONVERSION_WORD}</Property>
+	</Properties>
+	<Appenders>
+		<ApplicationInsightsAppender name="aiAppender" />
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="${LOG_PATTERN}"/>
+		</Console>
+		<RollingFile name="RollingFileAppender" 
+					fileName="${sys:LOG_PATH}/${sys:SERVICE_NAME}.log"
+					filePattern="${sys:LOG_PATH}/${sys:SERVICE_NAME}.%i.log">
+			<PatternLayout pattern="${LOG_PATTERN_OMS}"/>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10 MB"/>		
+			</Policies>		
+			<DefaultRolloverStrategy max="20"/>		
+		</RollingFile>
+					
+	</Appenders>
+	<Loggers>
+		<Root level="info">
+			<AppenderRef ref="aiAppender" />
+			<AppenderRef ref="RollingFileAppender" />
+			<AppenderRef ref="STDOUT" />
+		</Root>
+	</Loggers>
+</Configuration>
