@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApplicationInsightsAgent>
+	<Instrumentation>
+
+		<!-- Collect remote dependency data -->
+		<BuiltIn>
+			<Jedis enabled="false" thresholdInMS="1000" />
+			<HTTP enabled="true" />
+			<JDBC enabled="false" />
+			<HIBERNATE enabled="true" />
+			<MaxStatementQueryLimitInMS>1000</MaxStatementQueryLimitInMS>
+		</BuiltIn>
+
+		<AgentLogger>TRACE</AgentLogger>
+	</Instrumentation>
+</ApplicationInsightsAgent>

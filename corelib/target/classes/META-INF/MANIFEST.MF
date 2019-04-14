@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: corelib
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: jm838d
+Implementation-Vendor-Id: com.kienp
+Build-Jdk: 1.8.0_162
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/corelib
+Created-By: Maven Integration for Eclipse
+

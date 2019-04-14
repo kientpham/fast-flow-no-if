@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<ruleset name="Custom ruleset" xmlns="http://pmd.sf.net/ruleset/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+	xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+
+	<description>
+  Igor - March 2016: 
+  Custom ruleset for 2016 project: Currently this file is manually uploaded to artifactory and pointed to from the plugin via a URL to artifactory.
+  </description>
+
+	<rule ref="rulesets/java/naming.xml">
+		<!-- Exclude LongVariable because we override the default behavior below -->
+		<exclude name="LongVariable" />
+		<exclude name="ShortVariable" />
+	</rule>
+
+	<rule ref="rulesets/java/naming.xml/LongVariable">
+		<properties>
+			<property name="minimum" value="40" />
+		</properties>
+	</rule>
+
+	<rule ref="rulesets/java/naming.xml/ShortVariable">
+		<properties>
+			  <property name="xpath">
+                <value>
+                    //VariableDeclaratorId[(string-length(@Image) &lt; 3) and (not ((@Image='id') or (@Image='ch') or (@Image='e')))]
+					 [not(ancestor::ForInit)]
+					 [not(../../VariableDeclarator and ../../../LocalVariableDeclaration and ../../../../ForStatement)]
+					 [not((ancestor::FormalParameter) and (ancestor::TryStatement))]
+                </value>
+            </property>
+		</properties>
+	</rule>
+	
+	<rule ref="rulesets/java/design.xml">
+		<exclude name="SingularField" />
+		<exclude name="ImmutableField"/>
+		<exclude name="AvoidConstantsInterface"/>
+	</rule>
+	
+	<!-- Alternate solution to above using XPath. Kept here as example
+	<rule ref="rulesets/java/naming.xml/ShortVariable">
+		<properties>
+			<property name="xpath">
+				<value>
+                    //VariableDeclaratorId[(string-length(@Image) &lt; 3) and (not (@Image='id'))]
+                    [not(ancestor::ForInit)]
+                    [not((ancestor::FormalParameter) and (ancestor::TryStatement))]
+                </value>
+			</property>
+		</properties>
+	</rule>-->
+
+	<rule ref="rulesets/java/coupling.xml">
+		<exclude name="LawOfDemeter" />
+	</rule>
+	
+	<!-- We do SAX parsing a lot and StringBuffer/Builder field is required.  -->
+	<rule ref="rulesets/java/strings.xml">
+		<exclude name="AvoidStringBufferField"/>
+	</rule>
+	
+	<rule ref="rulesets/java/logging-java.xml">
+		<exclude name="GuardLogStatementJavaUtil"/>
+	</rule>
+</ruleset>
