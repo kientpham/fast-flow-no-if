@@ -37,10 +37,10 @@ public class TestFactory extends AbstractFactory<TransactionModel, OmnibusDTO> {
 
 	@Override
 	protected MasterWorkflow<TransactionModel, OmnibusDTO> initiateWorkflow() {
-		//sampleworkflow =new MasterWorkflow<TransactionModel, OmnibusDTO>();
-		sampleworkflow.setBaseTransactionManager(transactionManager);
-		sampleworkflow.setFirstBuilder(firstBuilder);
-		sampleworkflow.setNextBuilder(secondBuilder);
-		return sampleworkflow;
+		workflow=new MasterWorkflow<TransactionModel, OmnibusDTO>();
+		workflow.setBaseTransactionManager(transactionManager);
+		workflow.setFirstBuilder(firstBuilder);
+		workflow.setNextBuilder(secondBuilder);
+		return workflow;
 	}
 }

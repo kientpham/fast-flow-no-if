@@ -38,7 +38,7 @@ public abstract class AbstractFactory<T, D> {
 		try {
 			log.info(String.format("START Process request: %s", this.toString()));
 			List<T> transactionList = this.getTransactionModel(inputList);			
-			MasterWorkflow<T, D> workflow = this.initiateWorkflow();
+			workflow = this.initiateWorkflow();
 			workflow.executeWorkflow(transactionList);
 			return transactionList;
 		} catch (WorkflowException e) {

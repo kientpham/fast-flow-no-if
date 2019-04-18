@@ -39,7 +39,7 @@ public class MasterWorkflow<T, D> {
 	/**
 	 * @param builder
 	 */
-	public void setNextBuilder(BaseBuilder<D> builder) {		
+	public void setNextBuilder(BaseBuilder<D> builder) {
 		builderList.add(builder);
 	}
 
