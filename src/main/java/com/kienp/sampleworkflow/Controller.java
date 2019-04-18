@@ -18,7 +18,11 @@ public class Controller {
 	public String index() {
 		
 		List<String> inputValues=Arrays.asList("test 1","Test 3");		
-		testFactory.processRequest(inputValues);
-		return "Successfull";
+		List<TransactionModel> transactionList=testFactory.processRequest(inputValues);
+		StringBuilder sb=new StringBuilder();
+		for (TransactionModel transaction:transactionList) {
+			sb.append(" " + transaction.getTransactionId());
+		}		
+		return "Process Successfully transactionId:" + sb.toString();
 	}
 }
