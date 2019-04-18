@@ -1,5 +1,8 @@
 package com.kienp.sampleworkflow;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,16 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
 
 	@Autowired
-	private TestRequest request;
+	private TestFactory testFactory;
 	
 	@RequestMapping("/")
 	public String index() {
-		// return new SampleRequest("Hello my workflow").processRequest();
-
-//		SampleRequest<TransactionModel, OmnibusDTO> request = new SampleRequest();
-		request.setRequestValue1("test 1");
-		request.setRequestValue2("test 2");
-		request.processRequest();
+		
+		List<String> inputValues=Arrays.asList("test 1","Test 3");		
+		testFactory.processRequest(inputValues);
 		return "Successfull";
 	}
 }

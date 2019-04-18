@@ -15,26 +15,31 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class MasterWorkflow<T, D> {
-	
+
 	private List<BaseBuilder<D>> builderList;
 
 	private BaseTransactionManager<T, D> baseTransaction;
-	
+
 	/**
 	 * 
 	 * @param baseTransaction
 	 */
 	public void setBaseTransactionManager(BaseTransactionManager<T, D> baseTransaction) {
-		this.baseTransaction=baseTransaction;
+		this.baseTransaction = baseTransaction;
 	}
-	
+
 	/**
 	 * @param builder
 	 */
-	public void setNextBuilder(BaseBuilder<D> builder) {
-		if (builderList == null) {
-			builderList = new ArrayList<BaseBuilder<D>>();
-		}
+	public void setFirstBuilder(BaseBuilder<D> builder) {
+		builderList = new ArrayList<BaseBuilder<D>>();
+		builderList.add(builder);
+	}
+
+	/**
+	 * @param builder
+	 */
+	public void setNextBuilder(BaseBuilder<D> builder) {		
 		builderList.add(builder);
 	}
 

@@ -15,12 +15,15 @@ import lombok.extern.log4j.Log4j2;
  */
 @ToString
 @Log4j2
-public abstract class AbstractRequest<T, D> {
+public abstract class AbstractFactory<T, D> {
+	
+	protected MasterWorkflow<T, D> workflow ;
+	
 	/**
 	 * @return
 	 * @throws WorkflowException
 	 */
-	protected abstract List<T> getTransactionModel() throws WorkflowException;
+	protected abstract List<T> getTransactionModel(List<?> inputList) throws WorkflowException;
 
 	/**
 	 * @return
@@ -31,10 +34,10 @@ public abstract class AbstractRequest<T, D> {
 	 * 
 	 * @return message
 	 */
-	public List<T> processRequest() {
+	public List<T> processRequest(List<?> inputList) {
 		try {
 			log.info(String.format("START Process request: %s", this.toString()));
-			List<T> transactionList = this.getTransactionModel();
+			List<T> transactionList = this.getTransactionModel(inputList);			
 			MasterWorkflow<T, D> workflow = this.initiateWorkflow();
 			workflow.executeWorkflow(transactionList);
 			return transactionList;
