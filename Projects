@@ -1,323 +1,716 @@
-2019-04-14 01:17:20.031  INFO 11380 --- [main] c.kienp.sampleworkflow.DemoApplication   : Starting DemoApplication on A6118672 with PID 11380 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
-2019-04-14 01:17:20.040  INFO 11380 --- [main] c.kienp.sampleworkflow.DemoApplication   : No active profile set, falling back to default profiles: default
-2019-04-14 01:17:20.087  INFO 11380 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6d2a209c: startup date [Sun Apr 14 01:17:20 PDT 2019]; root of context hierarchy
-2019-04-14 01:17:20.981  INFO 11380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$dddee52d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:17:21.024  INFO 11380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$96f37431] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:17:21.402  INFO 11380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-04-14 01:17:21.421  INFO 11380 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-04-14 01:17:21.421  INFO 11380 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
-2019-04-14 01:17:21.424  INFO 11380 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
-2019-04-14 01:17:21.541  INFO 11380 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-04-14 01:17:21.541  INFO 11380 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1454 ms
-2019-04-14 01:17:21.607  INFO 11380 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-04-14 01:17:21.611  INFO 11380 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-04-14 01:17:21.612  INFO 11380 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-04-14 01:17:21.612  INFO 11380 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-04-14 01:17:21.612  INFO 11380 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-04-14 01:17:21.643  WARN 11380 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'controller': Unsatisfied dependency expressed through field 'request'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.kienp.sampleworkflow.TestRequest' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2019-04-14 01:17:21.645  INFO 11380 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-04-14 01:17:21.655  INFO 11380 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-04-14 01:17:21.738 ERROR 11380 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field request in com.kienp.sampleworkflow.Controller required a bean of type 'com.kienp.sampleworkflow.TestRequest' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.kienp.sampleworkflow.TestRequest' in your configuration.
-
-2019-04-14 01:17:59.997  INFO 31704 --- [main] c.kienp.sampleworkflow.DemoApplication   : Starting DemoApplication on A6118672 with PID 31704 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
-2019-04-14 01:18:00.000  INFO 31704 --- [main] c.kienp.sampleworkflow.DemoApplication   : No active profile set, falling back to default profiles: default
-2019-04-14 01:18:00.042  INFO 31704 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@78e94dcf: startup date [Sun Apr 14 01:18:00 PDT 2019]; root of context hierarchy
-2019-04-14 01:18:00.656  INFO 31704 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$d368ae7b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:18:00.680  INFO 31704 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$8c7d3d7f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:18:00.982  INFO 31704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-04-14 01:18:00.999  INFO 31704 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-04-14 01:18:01.000  INFO 31704 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
-2019-04-14 01:18:01.003  INFO 31704 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
-2019-04-14 01:18:01.104  INFO 31704 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-04-14 01:18:01.104  INFO 31704 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1062 ms
-2019-04-14 01:18:01.174  INFO 31704 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-04-14 01:18:01.178  INFO 31704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-04-14 01:18:01.179  INFO 31704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-04-14 01:18:01.179  INFO 31704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-04-14 01:18:01.179  INFO 31704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-04-14 01:18:01.220  WARN 31704 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'controller': Unsatisfied dependency expressed through field 'request'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.kienp.sampleworkflow.TestRequest' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2019-04-14 01:18:01.222  INFO 31704 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-04-14 01:18:01.233  INFO 31704 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-04-14 01:18:01.313 ERROR 31704 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field request in com.kienp.sampleworkflow.Controller required a bean of type 'com.kienp.sampleworkflow.TestRequest' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.kienp.sampleworkflow.TestRequest' in your configuration.
-
-2019-04-14 01:18:25.930  INFO 16164 --- [main] c.kienp.sampleworkflow.DemoApplication   : Starting DemoApplication on A6118672 with PID 16164 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
-2019-04-14 01:18:25.935  INFO 16164 --- [main] c.kienp.sampleworkflow.DemoApplication   : No active profile set, falling back to default profiles: default
-2019-04-14 01:18:25.982  INFO 16164 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4c15e7fd: startup date [Sun Apr 14 01:18:25 PDT 2019]; root of context hierarchy
-2019-04-14 01:18:26.677  INFO 16164 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$5b745e0f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:18:26.702  INFO 16164 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$1488ed13] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:18:26.968  INFO 16164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-04-14 01:18:26.983  INFO 16164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-04-14 01:18:26.984  INFO 16164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
-2019-04-14 01:18:26.987  INFO 16164 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
-2019-04-14 01:18:27.081  INFO 16164 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-04-14 01:18:27.082  INFO 16164 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1099 ms
-2019-04-14 01:18:27.148  INFO 16164 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-04-14 01:18:27.152  INFO 16164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-04-14 01:18:27.153  INFO 16164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-04-14 01:18:27.153  INFO 16164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-04-14 01:18:27.153  INFO 16164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-04-14 01:18:27.191  WARN 16164 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'controller': Unsatisfied dependency expressed through field 'request'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testRequest': Unsatisfied dependency expressed through field 'sampleWorkflow'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.kienp.workflow.Workflow<com.kienp.sampleworkflow.TransactionModel, com.kienp.sampleworkflow.OmnibusDTO>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2019-04-14 01:18:27.192  INFO 16164 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-04-14 01:18:27.203  INFO 16164 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-04-14 01:18:27.293 ERROR 16164 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field sampleWorkflow in com.kienp.sampleworkflow.TestRequest required a bean of type 'com.kienp.workflow.Workflow' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.kienp.workflow.Workflow' in your configuration.
-
-2019-04-14 01:20:20.240  INFO 2352 --- [main] c.kienp.sampleworkflow.DemoApplication   : Starting DemoApplication on A6118672 with PID 2352 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
-2019-04-14 01:20:20.243  INFO 2352 --- [main] c.kienp.sampleworkflow.DemoApplication   : No active profile set, falling back to default profiles: default
-2019-04-14 01:20:20.278  INFO 2352 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7995092a: startup date [Sun Apr 14 01:20:20 PDT 2019]; root of context hierarchy
-2019-04-14 01:20:21.113  INFO 2352 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$5b745e0f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:20:21.148  INFO 2352 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$1488ed13] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:20:21.530  INFO 2352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-04-14 01:20:21.547  INFO 2352 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-04-14 01:20:21.547  INFO 2352 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
-2019-04-14 01:20:21.550  INFO 2352 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
-2019-04-14 01:20:21.659  INFO 2352 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-04-14 01:20:21.659  INFO 2352 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1381 ms
-2019-04-14 01:20:21.725  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-04-14 01:20:21.728  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-04-14 01:20:21.728  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-04-14 01:20:21.728  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-04-14 01:20:21.728  INFO 2352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-04-14 01:20:21.761  WARN 2352 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'controller': Unsatisfied dependency expressed through field 'request'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testRequest': Unsatisfied dependency expressed through field 'sampleWorkflow'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.kienp.workflow.Workflow<com.kienp.sampleworkflow.TransactionModel, com.kienp.sampleworkflow.OmnibusDTO>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2019-04-14 01:20:21.763  INFO 2352 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-04-14 01:20:21.780  INFO 2352 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-04-14 01:20:21.867 ERROR 2352 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field sampleWorkflow in com.kienp.sampleworkflow.TestRequest required a bean of type 'com.kienp.workflow.Workflow' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.kienp.workflow.Workflow' in your configuration.
-
-2019-04-14 01:22:28.736  INFO 1524 --- [main] c.kienp.sampleworkflow.DemoApplication   : Starting DemoApplication on A6118672 with PID 1524 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
-2019-04-14 01:22:28.738  INFO 1524 --- [main] c.kienp.sampleworkflow.DemoApplication   : No active profile set, falling back to default profiles: default
-2019-04-14 01:22:28.766  INFO 1524 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2fd6b6c7: startup date [Sun Apr 14 01:22:28 PDT 2019]; root of context hierarchy
-2019-04-14 01:22:29.376  INFO 1524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$294793c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:22:29.400  INFO 1524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$e25c22c8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:22:29.644  INFO 1524 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-04-14 01:22:29.661  INFO 1524 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-04-14 01:22:29.661  INFO 1524 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
-2019-04-14 01:22:29.666  INFO 1524 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
-2019-04-14 01:22:29.759  INFO 1524 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-04-14 01:22:29.759  INFO 1524 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 993 ms
-2019-04-14 01:22:29.825  INFO 1524 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-04-14 01:22:29.829  INFO 1524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-04-14 01:22:29.829  INFO 1524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-04-14 01:22:29.829  INFO 1524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-04-14 01:22:29.829  INFO 1524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-04-14 01:22:29.882  WARN 1524 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'controller': Unsatisfied dependency expressed through field 'request'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testRequest': Unsatisfied dependency expressed through field 'sampleWorkflow'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.kienp.workflow.BaseWorkflow<com.kienp.sampleworkflow.TransactionModel, com.kienp.sampleworkflow.OmnibusDTO>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2019-04-14 01:22:29.884  INFO 1524 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-04-14 01:22:29.894  INFO 1524 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-04-14 01:22:29.973 ERROR 1524 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field sampleWorkflow in com.kienp.sampleworkflow.TestRequest required a bean of type 'com.kienp.workflow.BaseWorkflow' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.kienp.workflow.BaseWorkflow' in your configuration.
-
-2019-04-14 01:23:19.658  INFO 27660 --- [main] c.kienp.sampleworkflow.DemoApplication   : Starting DemoApplication on A6118672 with PID 27660 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
-2019-04-14 01:23:19.661  INFO 27660 --- [main] c.kienp.sampleworkflow.DemoApplication   : No active profile set, falling back to default profiles: default
-2019-04-14 01:23:19.706  INFO 27660 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7c469c48: startup date [Sun Apr 14 01:23:19 PDT 2019]; root of context hierarchy
-2019-04-14 01:23:20.560  INFO 27660 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$3977817] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:23:20.586  INFO 27660 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$bcac071b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:23:20.984  INFO 27660 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-04-14 01:23:21.012  INFO 27660 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-04-14 01:23:21.012  INFO 27660 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
-2019-04-14 01:23:21.016  INFO 27660 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
-2019-04-14 01:23:21.159  INFO 27660 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-04-14 01:23:21.160  INFO 27660 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1454 ms
-2019-04-14 01:23:21.246  INFO 27660 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-04-14 01:23:21.250  INFO 27660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-04-14 01:23:21.250  INFO 27660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-04-14 01:23:21.250  INFO 27660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-04-14 01:23:21.251  INFO 27660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-04-14 01:23:21.302  WARN 27660 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'controller': Unsatisfied dependency expressed through field 'request'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testRequest': Unsatisfied dependency expressed through field 'sampleWorkflow'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.kienp.workflow.BaseWorkflow<com.kienp.sampleworkflow.TransactionModel, com.kienp.sampleworkflow.OmnibusDTO>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2019-04-14 01:23:21.305  INFO 27660 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-04-14 01:23:21.317  INFO 27660 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-04-14 01:23:21.445 ERROR 27660 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field sampleWorkflow in com.kienp.sampleworkflow.TestRequest required a bean of type 'com.kienp.workflow.BaseWorkflow' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.kienp.workflow.BaseWorkflow' in your configuration.
-
-2019-04-14 01:25:01.031  INFO 25124 --- [main] c.kienp.sampleworkflow.DemoApplication   : Starting DemoApplication on A6118672 with PID 25124 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
-2019-04-14 01:25:01.033  INFO 25124 --- [main] c.kienp.sampleworkflow.DemoApplication   : No active profile set, falling back to default profiles: default
-2019-04-14 01:25:01.062  INFO 25124 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7fc2413d: startup date [Sun Apr 14 01:25:01 PDT 2019]; root of context hierarchy
-2019-04-14 01:25:01.702  INFO 25124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$a5e372ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:25:01.727  INFO 25124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$5ef80203] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:25:02.001  INFO 25124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-04-14 01:25:02.018  INFO 25124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-04-14 01:25:02.019  INFO 25124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
-2019-04-14 01:25:02.022  INFO 25124 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
-2019-04-14 01:25:02.120  INFO 25124 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-04-14 01:25:02.120  INFO 25124 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1058 ms
-2019-04-14 01:25:02.187  INFO 25124 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-04-14 01:25:02.191  INFO 25124 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-04-14 01:25:02.191  INFO 25124 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-04-14 01:25:02.191  INFO 25124 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-04-14 01:25:02.191  INFO 25124 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-04-14 01:25:02.235  WARN 25124 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'controller': Unsatisfied dependency expressed through field 'request'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testRequest': Unsatisfied dependency expressed through field 'sampleWorkflow'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.kienp.workflow.BaseWorkflow<com.kienp.sampleworkflow.TransactionModel, com.kienp.sampleworkflow.OmnibusDTO>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2019-04-14 01:25:02.237  INFO 25124 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-04-14 01:25:02.249  INFO 25124 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-04-14 01:25:02.332 ERROR 25124 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field sampleWorkflow in com.kienp.sampleworkflow.TestRequest required a bean of type 'com.kienp.workflow.BaseWorkflow' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.kienp.workflow.BaseWorkflow' in your configuration.
-
-2019-04-14 01:37:11.096  INFO 7704 --- [main] c.kienp.sampleworkflow.DemoApplication   : Starting DemoApplication on A6118672 with PID 7704 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
-2019-04-14 01:37:11.099  INFO 7704 --- [main] c.kienp.sampleworkflow.DemoApplication   : No active profile set, falling back to default profiles: default
-2019-04-14 01:37:11.137  INFO 7704 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5e316c74: startup date [Sun Apr 14 01:37:11 PDT 2019]; root of context hierarchy
-2019-04-14 01:37:11.854  INFO 7704 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$21c9842b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:37:11.882  INFO 7704 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$dade132f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:37:12.198  INFO 7704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-04-14 01:37:12.216  INFO 7704 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-04-14 01:37:12.216  INFO 7704 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
-2019-04-14 01:37:12.220  INFO 7704 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
-2019-04-14 01:37:12.336  INFO 7704 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-04-14 01:37:12.336  INFO 7704 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1199 ms
-2019-04-14 01:37:12.407  INFO 7704 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-04-14 01:37:12.411  INFO 7704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-04-14 01:37:12.412  INFO 7704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-04-14 01:37:12.412  INFO 7704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-04-14 01:37:12.414  INFO 7704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-04-14 01:37:12.469  WARN 7704 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'controller': Unsatisfied dependency expressed through field 'request'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testRequest': Unsatisfied dependency expressed through field 'sampleWorkflow'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.kienp.workflow.BaseWorkflow<com.kienp.sampleworkflow.TransactionModel, com.kienp.sampleworkflow.OmnibusDTO>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2019-04-14 01:37:12.472  INFO 7704 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-04-14 01:37:12.487  INFO 7704 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-04-14 01:37:12.605 ERROR 7704 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field sampleWorkflow in com.kienp.sampleworkflow.TestRequest required a bean of type 'com.kienp.workflow.BaseWorkflow' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.kienp.workflow.BaseWorkflow' in your configuration.
-
-2019-04-14 01:39:29.258  INFO 28400 --- [main] com.kienp.DemoApplication                : Starting DemoApplication on A6118672 with PID 28400 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
-2019-04-14 01:39:29.260  INFO 28400 --- [main] com.kienp.DemoApplication                : No active profile set, falling back to default profiles: default
-2019-04-14 01:39:29.290  INFO 28400 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5a955565: startup date [Sun Apr 14 01:39:29 PDT 2019]; root of context hierarchy
-2019-04-14 01:39:29.934  INFO 28400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$96cdbaf7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:39:29.957  INFO 28400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$4fe249fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-14 01:39:30.218  INFO 28400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-04-14 01:39:30.233  INFO 28400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-04-14 01:39:30.233  INFO 28400 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
-2019-04-14 01:39:30.237  INFO 28400 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
-2019-04-14 01:39:30.351  INFO 28400 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-04-14 01:39:30.351  INFO 28400 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1061 ms
-2019-04-14 01:39:30.430  INFO 28400 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-04-14 01:39:30.434  INFO 28400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-04-14 01:39:30.434  INFO 28400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-04-14 01:39:30.434  INFO 28400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-04-14 01:39:30.434  INFO 28400 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-04-14 01:39:30.533  INFO 28400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-04-14 01:39:30.698  INFO 28400 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5a955565: startup date [Sun Apr 14 01:39:29 PDT 2019]; root of context hierarchy
-2019-04-14 01:39:30.741  INFO 28400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.kienp.sampleworkflow.Controller.index()
-2019-04-14 01:39:30.744  INFO 28400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2019-04-14 01:39:30.744  INFO 28400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2019-04-14 01:39:30.765  INFO 28400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-04-14 01:39:30.765  INFO 28400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-04-14 01:39:31.035  INFO 28400 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2019-04-14 01:39:31.041  INFO 28400 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
-2019-04-14 01:39:31.043  INFO 28400 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
-2019-04-14 01:39:31.058  INFO 28400 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
-2019-04-14 01:39:31.084  INFO 28400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-04-14 01:39:31.087  INFO 28400 --- [main] com.kienp.DemoApplication                : Started DemoApplication in 2.088 seconds (JVM running for 2.645)
-2019-04-14 01:39:37.900  INFO 28400 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2019-04-14 01:39:37.900  INFO 28400 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2019-04-14 01:39:37.927  INFO 28400 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
-2019-04-14 01:39:37.946  INFO 28400 --- [http-nio-8080-exec-1] com.kienp.workflow.AbstractRequest       : START Process request: AbstractRequest()
-2019-04-14 01:39:37.947  INFO 28400 --- [http-nio-8080-exec-1] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-test 2
-2019-04-14 01:39:37.947  INFO 28400 --- [http-nio-8080-exec-1] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:02:08.574  INFO 12328 --- [main] com.kienp.DemoApplication                : Starting DemoApplication on A6118672 with PID 12328 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
+2019-04-18 12:02:08.589  INFO 12328 --- [main] com.kienp.DemoApplication                : No active profile set, falling back to default profiles: default
+2019-04-18 12:02:08.636  INFO 12328 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@22635ba0: startup date [Thu Apr 18 12:02:08 PDT 2019]; root of context hierarchy
+2019-04-18 12:02:09.573  INFO 12328 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$e8721278] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:02:09.636  INFO 12328 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$a186a17c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:02:10.132  INFO 12328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-18 12:02:10.153  INFO 12328 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-18 12:02:10.153  INFO 12328 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-04-18 12:02:10.153  INFO 12328 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
+2019-04-18 12:02:10.262  INFO 12328 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-18 12:02:10.262  INFO 12328 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1626 ms
+2019-04-18 12:02:10.325  INFO 12328 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-04-18 12:02:10.325  INFO 12328 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-18 12:02:10.325  INFO 12328 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-18 12:02:10.325  INFO 12328 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-18 12:02:10.325  INFO 12328 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-18 12:02:10.419  INFO 12328 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:02:10.606  INFO 12328 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@22635ba0: startup date [Thu Apr 18 12:02:08 PDT 2019]; root of context hierarchy
+2019-04-18 12:02:10.669  INFO 12328 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.kienp.sampleworkflow.Controller.index()
+2019-04-18 12:02:10.684  INFO 12328 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-18 12:02:10.684  INFO 12328 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-18 12:02:10.700  INFO 12328 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:02:10.700  INFO 12328 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:02:10.966  INFO 12328 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-04-18 12:02:10.981  INFO 12328 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2019-04-18 12:02:10.981  INFO 12328 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2019-04-18 12:02:10.997  INFO 12328 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-04-18 12:02:11.059  INFO 12328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-18 12:02:11.059  INFO 12328 --- [main] com.kienp.DemoApplication                : Started DemoApplication in 2.814 seconds (JVM running for 3.618)
+2019-04-18 12:02:21.261  INFO 12328 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-18 12:02:21.269  INFO 12328 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-18 12:02:21.290  INFO 12328 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2019-04-18 12:02:21.302  INFO 12328 --- [http-nio-8080-exec-1] com.kienp.workflow.AbstractRequest       : START Process request: AbstractRequest()
+2019-04-18 12:02:21.302  INFO 12328 --- [http-nio-8080-exec-1] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 2
+2019-04-18 12:02:21.302  INFO 12328 --- [http-nio-8080-exec-1] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:06:06.637  INFO 12328 --- [http-nio-8080-exec-3] com.kienp.workflow.AbstractRequest       : START Process request: AbstractRequest()
+2019-04-18 12:06:06.642  INFO 12328 --- [http-nio-8080-exec-3] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 2
+2019-04-18 12:06:06.642  INFO 12328 --- [http-nio-8080-exec-3] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:06:06.642  INFO 12328 --- [http-nio-8080-exec-3] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:06:06.642  INFO 12328 --- [http-nio-8080-exec-3] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:06:30.857  INFO 12328 --- [http-nio-8080-exec-5] com.kienp.workflow.AbstractRequest       : START Process request: AbstractRequest()
+2019-04-18 12:06:30.859  INFO 12328 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 2
+2019-04-18 12:06:30.859  INFO 12328 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:06:30.859  INFO 12328 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:06:30.859  INFO 12328 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:06:30.859  INFO 12328 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:06:30.859  INFO 12328 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:06:48.345  INFO 12328 --- [http-nio-8080-exec-6] com.kienp.workflow.AbstractRequest       : START Process request: AbstractRequest()
+2019-04-18 12:06:48.346  INFO 12328 --- [http-nio-8080-exec-6] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 2
+2019-04-18 12:06:48.347  INFO 12328 --- [http-nio-8080-exec-6] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:06:48.347  INFO 12328 --- [http-nio-8080-exec-6] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:06:48.347  INFO 12328 --- [http-nio-8080-exec-6] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:06:48.347  INFO 12328 --- [http-nio-8080-exec-6] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:06:48.347  INFO 12328 --- [http-nio-8080-exec-6] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:06:48.347  INFO 12328 --- [http-nio-8080-exec-6] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:06:48.347  INFO 12328 --- [http-nio-8080-exec-6] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:06:52.992  INFO 12328 --- [RMI TCP Connection(15)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-18 12:06:53.008  INFO 12328 --- [RMI TCP Connection(15)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@22635ba0: startup date [Thu Apr 18 12:02:08 PDT 2019]; root of context hierarchy
+2019-04-18 12:06:53.009  INFO 12328 --- [RMI TCP Connection(15)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2019-04-18 12:06:53.009  INFO 12328 --- [RMI TCP Connection(15)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-04-18 12:06:53.009  INFO 12328 --- [RMI TCP Connection(15)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-04-18 12:06:53.009  INFO 12328 --- [RMI TCP Connection(15)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-04-18 12:06:57.796  INFO 3068 --- [main] com.kienp.DemoApplication                : Starting DemoApplication on A6118672 with PID 3068 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
+2019-04-18 12:06:57.812  INFO 3068 --- [main] com.kienp.DemoApplication                : No active profile set, falling back to default profiles: default
+2019-04-18 12:06:57.843  INFO 3068 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1df8b5b8: startup date [Thu Apr 18 12:06:57 PDT 2019]; root of context hierarchy
+2019-04-18 12:06:58.484  INFO 3068 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$11dd509c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:06:58.515  INFO 3068 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$caf1dfa0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:06:58.796  INFO 3068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-18 12:06:58.811  INFO 3068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-18 12:06:58.811  INFO 3068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-04-18 12:06:58.827  INFO 3068 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_111\jre\bin;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
+2019-04-18 12:06:58.936  INFO 3068 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-18 12:06:58.936  INFO 3068 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1093 ms
+2019-04-18 12:06:59.015  INFO 3068 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-04-18 12:06:59.030  INFO 3068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-18 12:06:59.030  INFO 3068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-18 12:06:59.030  INFO 3068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-18 12:06:59.030  INFO 3068 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-18 12:06:59.155  INFO 3068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:06:59.343  INFO 3068 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1df8b5b8: startup date [Thu Apr 18 12:06:57 PDT 2019]; root of context hierarchy
+2019-04-18 12:06:59.390  INFO 3068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.kienp.sampleworkflow.Controller.index()
+2019-04-18 12:06:59.405  INFO 3068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-18 12:06:59.405  INFO 3068 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-18 12:06:59.421  INFO 3068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:06:59.421  INFO 3068 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:06:59.749  INFO 3068 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-04-18 12:06:59.749  INFO 3068 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2019-04-18 12:06:59.765  INFO 3068 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2019-04-18 12:06:59.780  INFO 3068 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-04-18 12:06:59.811  INFO 3068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-18 12:06:59.828  INFO 3068 --- [main] com.kienp.DemoApplication                : Started DemoApplication in 2.327 seconds (JVM running for 4.291)
+2019-04-18 12:07:04.035  INFO 3068 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-18 12:07:04.045  INFO 3068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-18 12:07:04.068  INFO 3068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2019-04-18 12:07:04.084  INFO 3068 --- [http-nio-8080-exec-1] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory()
+2019-04-18 12:07:04.084  INFO 3068 --- [http-nio-8080-exec-1] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:07:04.084  INFO 3068 --- [http-nio-8080-exec-1] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:07:10.790  INFO 3068 --- [http-nio-8080-exec-2] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory()
+2019-04-18 12:07:10.797  INFO 3068 --- [http-nio-8080-exec-2] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:07:10.797  INFO 3068 --- [http-nio-8080-exec-2] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:07:10.797  INFO 3068 --- [http-nio-8080-exec-2] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:07:10.797  INFO 3068 --- [http-nio-8080-exec-2] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:07:57.428  INFO 3068 --- [http-nio-8080-exec-3] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory()
+2019-04-18 12:07:57.438  INFO 3068 --- [http-nio-8080-exec-3] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:07:57.438  INFO 3068 --- [http-nio-8080-exec-3] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:07:57.438  INFO 3068 --- [http-nio-8080-exec-3] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:07:57.438  INFO 3068 --- [http-nio-8080-exec-3] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:07:57.438  INFO 3068 --- [http-nio-8080-exec-3] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:07:57.438  INFO 3068 --- [http-nio-8080-exec-3] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:08:01.320  INFO 3068 --- [http-nio-8080-exec-4] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory()
+2019-04-18 12:08:01.329  INFO 3068 --- [http-nio-8080-exec-4] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:08:01.329  INFO 3068 --- [http-nio-8080-exec-4] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:08:01.329  INFO 3068 --- [http-nio-8080-exec-4] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:08:01.329  INFO 3068 --- [http-nio-8080-exec-4] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:08:01.329  INFO 3068 --- [http-nio-8080-exec-4] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:08:01.329  INFO 3068 --- [http-nio-8080-exec-4] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:08:01.329  INFO 3068 --- [http-nio-8080-exec-4] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:08:01.329  INFO 3068 --- [http-nio-8080-exec-4] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:08:09.893  INFO 3068 --- [http-nio-8080-exec-5] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory()
+2019-04-18 12:08:09.893  INFO 3068 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:08:09.893  INFO 3068 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:08:09.898  INFO 3068 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:08:09.898  INFO 3068 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:08:09.898  INFO 3068 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:08:09.898  INFO 3068 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:08:09.898  INFO 3068 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:08:09.898  INFO 3068 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:08:09.898  INFO 3068 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:08:09.898  INFO 3068 --- [http-nio-8080-exec-5] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:09:24.387  INFO 3068 --- [http-nio-8080-exec-9] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory()
+2019-04-18 12:09:32.995  INFO 3068 --- [http-nio-8080-exec-9] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:09:32.997  INFO 3068 --- [http-nio-8080-exec-9] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:09:51.066  INFO 3068 --- [http-nio-8080-exec-9] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:09:51.078  INFO 3068 --- [http-nio-8080-exec-9] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:09:52.356  INFO 3068 --- [http-nio-8080-exec-9] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:09:52.360  INFO 3068 --- [http-nio-8080-exec-9] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:09:53.999  INFO 3068 --- [http-nio-8080-exec-9] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:09:54.005  INFO 3068 --- [http-nio-8080-exec-9] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:09:54.948  INFO 3068 --- [http-nio-8080-exec-9] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:09:54.948  INFO 3068 --- [http-nio-8080-exec-9] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:09:55.714  INFO 3068 --- [http-nio-8080-exec-9] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:09:55.714  INFO 3068 --- [http-nio-8080-exec-9] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:10:05.138  INFO 3068 --- [http-nio-8080-exec-7] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory()
+2019-04-18 12:12:10.343  INFO 3068 --- [http-nio-8080-exec-7] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:12:10.349  INFO 3068 --- [http-nio-8080-exec-7] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:12:12.209  INFO 3068 --- [http-nio-8080-exec-7] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:12:12.221  INFO 3068 --- [http-nio-8080-exec-7] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:12:14.106  INFO 3068 --- [http-nio-8080-exec-7] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:12:14.109  INFO 3068 --- [http-nio-8080-exec-7] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:12:21.182  INFO 3068 --- [http-nio-8080-exec-7] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:12:21.198  INFO 3068 --- [http-nio-8080-exec-7] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:12:21.198  INFO 3068 --- [http-nio-8080-exec-7] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:12:21.198  INFO 3068 --- [http-nio-8080-exec-7] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:12:21.198  INFO 3068 --- [http-nio-8080-exec-7] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:12:21.199  INFO 3068 --- [http-nio-8080-exec-7] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:12:21.199  INFO 3068 --- [http-nio-8080-exec-7] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:12:21.199  INFO 3068 --- [http-nio-8080-exec-7] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:12:25.859  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory()
+2019-04-18 12:15:50.945  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:15:50.954  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:15:50.954  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:15:50.954  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:15:50.954  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:15:50.954  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:15:50.954  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:15:50.955  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:15:50.955  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:15:50.955  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:15:50.955  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:15:50.955  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:15:50.955  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:15:50.955  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:15:50.955  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.FirstBuilder    : First builder: another thing
+2019-04-18 12:15:50.955  INFO 3068 --- [http-nio-8080-exec-10] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:16:44.645  INFO 3068 --- [RMI TCP Connection(19)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-18 12:16:44.659  INFO 3068 --- [RMI TCP Connection(19)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1df8b5b8: startup date [Thu Apr 18 12:06:57 PDT 2019]; root of context hierarchy
+2019-04-18 12:16:44.660  INFO 3068 --- [RMI TCP Connection(19)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2019-04-18 12:16:44.660  INFO 3068 --- [RMI TCP Connection(19)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-04-18 12:16:44.660  INFO 3068 --- [RMI TCP Connection(19)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-04-18 12:16:44.660  INFO 3068 --- [RMI TCP Connection(19)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-04-18 12:16:47.789  INFO 15972 --- [main] com.kienp.DemoApplication                : Starting DemoApplication on A6118672 with PID 15972 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
+2019-04-18 12:16:47.800  INFO 15972 --- [main] com.kienp.DemoApplication                : No active profile set, falling back to default profiles: default
+2019-04-18 12:16:47.826  INFO 15972 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@495ee280: startup date [Thu Apr 18 12:16:47 PDT 2019]; root of context hierarchy
+2019-04-18 12:16:48.451  INFO 15972 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$236b765a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:16:48.482  INFO 15972 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$dc80055e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:16:48.764  INFO 15972 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-18 12:16:48.795  INFO 15972 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-18 12:16:48.797  INFO 15972 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-04-18 12:16:48.798  INFO 15972 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_111\jre\bin;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
+2019-04-18 12:16:48.892  INFO 15972 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-18 12:16:48.892  INFO 15972 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1066 ms
+2019-04-18 12:16:48.970  INFO 15972 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-04-18 12:16:48.970  INFO 15972 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-18 12:16:48.970  INFO 15972 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-18 12:16:48.970  INFO 15972 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-18 12:16:48.970  INFO 15972 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-18 12:16:49.127  INFO 15972 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:16:49.330  INFO 15972 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@495ee280: startup date [Thu Apr 18 12:16:47 PDT 2019]; root of context hierarchy
+2019-04-18 12:16:49.377  INFO 15972 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.kienp.sampleworkflow.Controller.index()
+2019-04-18 12:16:49.392  INFO 15972 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-18 12:16:49.392  INFO 15972 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-18 12:16:49.408  INFO 15972 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:16:49.408  INFO 15972 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:16:49.720  INFO 15972 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-04-18 12:16:49.736  INFO 15972 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2019-04-18 12:16:49.736  INFO 15972 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2019-04-18 12:16:49.752  INFO 15972 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-04-18 12:16:49.799  INFO 15972 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-18 12:16:49.805  INFO 15972 --- [main] com.kienp.DemoApplication                : Started DemoApplication in 2.33 seconds (JVM running for 3.034)
+2019-04-18 12:16:58.303  INFO 15972 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-18 12:16:58.316  INFO 15972 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-18 12:16:58.378  INFO 15972 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 62 ms
+2019-04-18 12:16:58.411  INFO 15972 --- [http-nio-8080-exec-2] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory()
+2019-04-18 12:17:05.419  INFO 15972 --- [http-nio-8080-exec-2] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:17:05.419  INFO 15972 --- [http-nio-8080-exec-2] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:17:11.694  INFO 15972 --- [http-nio-8080-exec-4] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory()
+2019-04-18 12:17:20.225  INFO 15972 --- [http-nio-8080-exec-4] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:17:20.236  INFO 15972 --- [http-nio-8080-exec-4] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:17:27.415  INFO 15972 --- [http-nio-8080-exec-3] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory()
+2019-04-18 12:17:31.405  INFO 15972 --- [http-nio-8080-exec-3] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:17:31.407  INFO 15972 --- [http-nio-8080-exec-3] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:33:25.994  INFO 15972 --- [RMI TCP Connection(26)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-18 12:33:26.003  INFO 15972 --- [RMI TCP Connection(26)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@495ee280: startup date [Thu Apr 18 12:16:47 PDT 2019]; root of context hierarchy
+2019-04-18 12:33:26.004  INFO 15972 --- [RMI TCP Connection(26)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2019-04-18 12:33:26.004  INFO 15972 --- [RMI TCP Connection(26)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-04-18 12:33:26.004  INFO 15972 --- [RMI TCP Connection(26)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-04-18 12:33:26.004  INFO 15972 --- [RMI TCP Connection(26)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-04-18 12:33:29.174  INFO 6640 --- [main] com.kienp.DemoApplication                : Starting DemoApplication on A6118672 with PID 6640 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
+2019-04-18 12:33:29.189  INFO 6640 --- [main] com.kienp.DemoApplication                : No active profile set, falling back to default profiles: default
+2019-04-18 12:33:29.223  INFO 6640 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2e32ccc5: startup date [Thu Apr 18 12:33:29 PDT 2019]; root of context hierarchy
+2019-04-18 12:33:29.863  INFO 6640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$15ba39a2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:33:29.895  INFO 6640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$cecec8a6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:33:30.176  INFO 6640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-18 12:33:30.182  INFO 6640 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-18 12:33:30.182  INFO 6640 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-04-18 12:33:30.198  INFO 6640 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_111\jre\bin;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
+2019-04-18 12:33:30.307  INFO 6640 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-18 12:33:30.307  INFO 6640 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1084 ms
+2019-04-18 12:33:30.370  INFO 6640 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-04-18 12:33:30.386  INFO 6640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-18 12:33:30.386  INFO 6640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-18 12:33:30.386  INFO 6640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-18 12:33:30.386  INFO 6640 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-18 12:33:30.511  INFO 6640 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:33:30.730  INFO 6640 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2e32ccc5: startup date [Thu Apr 18 12:33:29 PDT 2019]; root of context hierarchy
+2019-04-18 12:33:30.777  INFO 6640 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.kienp.sampleworkflow.Controller.index()
+2019-04-18 12:33:30.777  INFO 6640 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-18 12:33:30.777  INFO 6640 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-18 12:33:30.793  INFO 6640 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:33:30.793  INFO 6640 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:33:31.121  INFO 6640 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-04-18 12:33:31.121  INFO 6640 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2019-04-18 12:33:31.121  INFO 6640 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2019-04-18 12:33:31.136  INFO 6640 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-04-18 12:33:31.183  INFO 6640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-18 12:33:31.191  INFO 6640 --- [main] com.kienp.DemoApplication                : Started DemoApplication in 2.313 seconds (JVM running for 3.029)
+2019-04-18 12:33:38.321  INFO 6640 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-18 12:33:38.324  INFO 6640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-18 12:33:38.342  INFO 6640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2019-04-18 12:33:38.357  INFO 6640 --- [http-nio-8080-exec-1] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory(workflow=null)
+2019-04-18 12:33:38.374 ERROR 6640 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.kienp.workflow.AbstractFactory.processRequest(AbstractFactory.java:42) ~[classes/:na]
+	at com.kienp.sampleworkflow.Controller.index(Controller.java:21) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_111]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+
+2019-04-18 12:35:00.638  INFO 6640 --- [http-nio-8080-exec-3] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory(workflow=null)
+2019-04-18 12:36:03.407 ERROR 6640 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.kienp.workflow.AbstractFactory.processRequest(AbstractFactory.java:42) ~[classes/:na]
+	at com.kienp.sampleworkflow.Controller.index(Controller.java:21) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_111]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+
+2019-04-18 12:36:36.063  INFO 6640 --- [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-18 12:36:36.074  INFO 6640 --- [RMI TCP Connection(11)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2e32ccc5: startup date [Thu Apr 18 12:33:29 PDT 2019]; root of context hierarchy
+2019-04-18 12:36:36.075  INFO 6640 --- [RMI TCP Connection(11)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2019-04-18 12:36:36.075  INFO 6640 --- [RMI TCP Connection(11)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-04-18 12:36:36.075  INFO 6640 --- [RMI TCP Connection(11)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-04-18 12:36:36.075  INFO 6640 --- [RMI TCP Connection(11)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-04-18 12:36:39.151  INFO 15564 --- [main] com.kienp.DemoApplication                : Starting DemoApplication on A6118672 with PID 15564 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
+2019-04-18 12:36:39.151  INFO 15564 --- [main] com.kienp.DemoApplication                : No active profile set, falling back to default profiles: default
+2019-04-18 12:36:39.198  INFO 15564 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6c7a164b: startup date [Thu Apr 18 12:36:39 PDT 2019]; root of context hierarchy
+2019-04-18 12:36:39.832  INFO 15564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$b86a19f6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:36:39.864  INFO 15564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$717ea8fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:36:40.160  INFO 15564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-18 12:36:40.176  INFO 15564 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-18 12:36:40.176  INFO 15564 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-04-18 12:36:40.176  INFO 15564 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_111\jre\bin;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
+2019-04-18 12:36:40.285  INFO 15564 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-18 12:36:40.289  INFO 15564 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1087 ms
+2019-04-18 12:36:40.352  INFO 15564 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-04-18 12:36:40.368  INFO 15564 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-18 12:36:40.368  INFO 15564 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-18 12:36:40.368  INFO 15564 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-18 12:36:40.368  INFO 15564 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-18 12:36:40.509  INFO 15564 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:36:40.712  INFO 15564 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6c7a164b: startup date [Thu Apr 18 12:36:39 PDT 2019]; root of context hierarchy
+2019-04-18 12:36:40.759  INFO 15564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.kienp.sampleworkflow.Controller.index()
+2019-04-18 12:36:40.759  INFO 15564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-18 12:36:40.759  INFO 15564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-18 12:36:40.774  INFO 15564 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:36:40.774  INFO 15564 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:36:41.103  INFO 15564 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-04-18 12:36:41.118  INFO 15564 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2019-04-18 12:36:41.118  INFO 15564 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2019-04-18 12:36:41.134  INFO 15564 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-04-18 12:36:41.181  INFO 15564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-18 12:36:41.181  INFO 15564 --- [main] com.kienp.DemoApplication                : Started DemoApplication in 2.327 seconds (JVM running for 2.99)
+2019-04-18 12:36:45.328  INFO 15564 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-18 12:36:45.333  INFO 15564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-18 12:36:45.349  INFO 15564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2019-04-18 12:36:45.362  INFO 15564 --- [http-nio-8080-exec-1] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory(workflow=null)
+2019-04-18 12:36:47.601  INFO 15564 --- [http-nio-8080-exec-1] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:36:47.601  INFO 15564 --- [http-nio-8080-exec-1] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:36:52.021  INFO 15564 --- [http-nio-8080-exec-4] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory(workflow=com.kienp.workflow.MasterWorkflow@78b7d311)
+2019-04-18 12:37:01.104  INFO 15564 --- [http-nio-8080-exec-4] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:37:01.106  INFO 15564 --- [http-nio-8080-exec-4] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:40:01.831  INFO 15564 --- [RMI TCP Connection(12)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-18 12:40:01.847  INFO 15564 --- [RMI TCP Connection(12)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6c7a164b: startup date [Thu Apr 18 12:36:39 PDT 2019]; root of context hierarchy
+2019-04-18 12:40:01.848  INFO 15564 --- [RMI TCP Connection(12)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2019-04-18 12:40:01.848  INFO 15564 --- [RMI TCP Connection(12)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-04-18 12:40:01.848  INFO 15564 --- [RMI TCP Connection(12)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-04-18 12:40:01.848  INFO 15564 --- [RMI TCP Connection(12)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-04-18 12:40:05.060  INFO 6576 --- [main] com.kienp.DemoApplication                : Starting DemoApplication on A6118672 with PID 6576 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
+2019-04-18 12:40:05.076  INFO 6576 --- [main] com.kienp.DemoApplication                : No active profile set, falling back to default profiles: default
+2019-04-18 12:40:05.107  INFO 6576 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3224a577: startup date [Thu Apr 18 12:40:05 PDT 2019]; root of context hierarchy
+2019-04-18 12:40:05.795  INFO 6576 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$976a7e16] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:40:05.826  INFO 6576 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$507f0d1a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:40:06.123  INFO 6576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-18 12:40:06.145  INFO 6576 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-18 12:40:06.145  INFO 6576 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-04-18 12:40:06.145  INFO 6576 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_111\jre\bin;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
+2019-04-18 12:40:06.238  INFO 6576 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-18 12:40:06.238  INFO 6576 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1131 ms
+2019-04-18 12:40:06.317  INFO 6576 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-04-18 12:40:06.317  INFO 6576 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-18 12:40:06.317  INFO 6576 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-18 12:40:06.317  INFO 6576 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-18 12:40:06.317  INFO 6576 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-18 12:40:06.457  INFO 6576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:40:06.660  INFO 6576 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3224a577: startup date [Thu Apr 18 12:40:05 PDT 2019]; root of context hierarchy
+2019-04-18 12:40:06.723  INFO 6576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.kienp.sampleworkflow.Controller.index()
+2019-04-18 12:40:06.723  INFO 6576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-18 12:40:06.723  INFO 6576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-18 12:40:06.754  INFO 6576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:40:06.754  INFO 6576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:40:07.082  INFO 6576 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-04-18 12:40:07.098  INFO 6576 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2019-04-18 12:40:07.098  INFO 6576 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2019-04-18 12:40:07.113  INFO 6576 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-04-18 12:40:07.160  INFO 6576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-18 12:40:07.167  INFO 6576 --- [main] com.kienp.DemoApplication                : Started DemoApplication in 2.425 seconds (JVM running for 3.16)
+2019-04-18 12:40:10.580  INFO 6576 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-18 12:40:10.581  INFO 6576 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-18 12:40:10.600  INFO 6576 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2019-04-18 12:40:10.618  INFO 6576 --- [http-nio-8080-exec-2] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory(workflow=null)
+2019-04-18 12:40:10.633 ERROR 6576 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.kienp.workflow.MasterWorkflow.setNextBuilder(MasterWorkflow.java:43) ~[classes/:na]
+	at com.kienp.sampleworkflow.TestFactory.initiateWorkflow(TestFactory.java:39) ~[classes/:na]
+	at com.kienp.workflow.AbstractFactory.processRequest(AbstractFactory.java:41) ~[classes/:na]
+	at com.kienp.sampleworkflow.Controller.index(Controller.java:21) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_111]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+
+2019-04-18 12:40:40.798  INFO 6576 --- [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-18 12:40:40.805  INFO 6576 --- [RMI TCP Connection(6)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3224a577: startup date [Thu Apr 18 12:40:05 PDT 2019]; root of context hierarchy
+2019-04-18 12:40:40.806  INFO 6576 --- [RMI TCP Connection(6)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2019-04-18 12:40:40.806  INFO 6576 --- [RMI TCP Connection(6)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-04-18 12:40:40.806  INFO 6576 --- [RMI TCP Connection(6)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-04-18 12:40:40.806  INFO 6576 --- [RMI TCP Connection(6)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-04-18 12:40:43.949  INFO 14548 --- [main] com.kienp.DemoApplication                : Starting DemoApplication on A6118672 with PID 14548 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
+2019-04-18 12:40:43.965  INFO 14548 --- [main] com.kienp.DemoApplication                : No active profile set, falling back to default profiles: default
+2019-04-18 12:40:43.997  INFO 14548 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2e32ccc5: startup date [Thu Apr 18 12:40:43 PDT 2019]; root of context hierarchy
+2019-04-18 12:40:44.622  INFO 14548 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$2d10f834] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:40:44.654  INFO 14548 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$e6258738] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:40:44.935  INFO 14548 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-18 12:40:44.950  INFO 14548 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-18 12:40:44.957  INFO 14548 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-04-18 12:40:44.958  INFO 14548 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_111\jre\bin;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
+2019-04-18 12:40:45.052  INFO 14548 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-18 12:40:45.052  INFO 14548 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1055 ms
+2019-04-18 12:40:45.130  INFO 14548 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-04-18 12:40:45.130  INFO 14548 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-18 12:40:45.130  INFO 14548 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-18 12:40:45.130  INFO 14548 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-18 12:40:45.130  INFO 14548 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-18 12:40:45.255  INFO 14548 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:40:45.458  INFO 14548 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2e32ccc5: startup date [Thu Apr 18 12:40:43 PDT 2019]; root of context hierarchy
+2019-04-18 12:40:45.505  INFO 14548 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.kienp.sampleworkflow.Controller.index()
+2019-04-18 12:40:45.521  INFO 14548 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-18 12:40:45.521  INFO 14548 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-18 12:40:45.537  INFO 14548 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:40:45.537  INFO 14548 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:40:45.849  INFO 14548 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-04-18 12:40:45.865  INFO 14548 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2019-04-18 12:40:45.865  INFO 14548 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2019-04-18 12:40:45.880  INFO 14548 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-04-18 12:40:45.927  INFO 14548 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-18 12:40:45.927  INFO 14548 --- [main] com.kienp.DemoApplication                : Started DemoApplication in 2.269 seconds (JVM running for 2.971)
+2019-04-18 12:40:49.417  INFO 14548 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-18 12:40:49.429  INFO 14548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-18 12:40:49.446  INFO 14548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2019-04-18 12:40:49.456  INFO 14548 --- [http-nio-8080-exec-1] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory(workflow=null)
+2019-04-18 12:40:49.456  INFO 14548 --- [http-nio-8080-exec-1] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:40:49.456  INFO 14548 --- [http-nio-8080-exec-1] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:40:52.263  INFO 14548 --- [http-nio-8080-exec-2] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory(workflow=com.kienp.workflow.MasterWorkflow@6b22c220)
+2019-04-18 12:40:52.267  INFO 14548 --- [http-nio-8080-exec-2] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:40:52.267  INFO 14548 --- [http-nio-8080-exec-2] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:42:12.137  INFO 14548 --- [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-18 12:42:12.140  INFO 14548 --- [RMI TCP Connection(10)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2e32ccc5: startup date [Thu Apr 18 12:40:43 PDT 2019]; root of context hierarchy
+2019-04-18 12:42:12.141  INFO 14548 --- [RMI TCP Connection(10)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2019-04-18 12:42:12.141  INFO 14548 --- [RMI TCP Connection(10)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-04-18 12:42:12.141  INFO 14548 --- [RMI TCP Connection(10)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-04-18 12:42:12.141  INFO 14548 --- [RMI TCP Connection(10)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-04-18 12:42:15.079  INFO 8752 --- [main] com.kienp.DemoApplication                : Starting DemoApplication on A6118672 with PID 8752 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
+2019-04-18 12:42:15.079  INFO 8752 --- [main] com.kienp.DemoApplication                : No active profile set, falling back to default profiles: default
+2019-04-18 12:42:15.110  INFO 8752 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5e316c74: startup date [Thu Apr 18 12:42:15 PDT 2019]; root of context hierarchy
+2019-04-18 12:42:15.642  INFO 8752 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$b84a29ab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:42:15.671  INFO 8752 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$715eb8af] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:42:15.921  INFO 8752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-18 12:42:15.936  INFO 8752 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-18 12:42:15.936  INFO 8752 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-04-18 12:42:15.936  INFO 8752 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
+2019-04-18 12:42:16.030  INFO 8752 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-18 12:42:16.030  INFO 8752 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 920 ms
+2019-04-18 12:42:16.093  INFO 8752 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-04-18 12:42:16.093  INFO 8752 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-18 12:42:16.093  INFO 8752 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-18 12:42:16.093  INFO 8752 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-18 12:42:16.093  INFO 8752 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-18 12:42:16.186  INFO 8752 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:42:16.343  INFO 8752 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5e316c74: startup date [Thu Apr 18 12:42:15 PDT 2019]; root of context hierarchy
+2019-04-18 12:42:16.374  INFO 8752 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.kienp.sampleworkflow.Controller.index()
+2019-04-18 12:42:16.374  INFO 8752 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-18 12:42:16.374  INFO 8752 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-18 12:42:16.389  INFO 8752 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:42:16.389  INFO 8752 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:42:16.624  INFO 8752 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-04-18 12:42:16.639  INFO 8752 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2019-04-18 12:42:16.639  INFO 8752 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2019-04-18 12:42:16.655  INFO 8752 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-04-18 12:42:16.690  INFO 8752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-18 12:42:16.690  INFO 8752 --- [main] com.kienp.DemoApplication                : Started DemoApplication in 1.876 seconds (JVM running for 2.429)
+2019-04-18 12:42:22.412  INFO 8752 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-18 12:42:22.415  INFO 8752 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-18 12:42:22.437  INFO 8752 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2019-04-18 12:42:22.455  INFO 8752 --- [http-nio-8080-exec-1] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory(workflow=null)
+2019-04-18 12:42:22.499 ERROR 8752 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.kienp.workflow.AbstractFactory.processRequest(AbstractFactory.java:42) ~[classes/:na]
+	at com.kienp.sampleworkflow.Controller.index(Controller.java:21) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_111]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.34.jar:8.5.34]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+
+2019-04-18 12:42:45.844  INFO 8752 --- [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-18 12:42:45.858  INFO 8752 --- [RMI TCP Connection(10)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5e316c74: startup date [Thu Apr 18 12:42:15 PDT 2019]; root of context hierarchy
+2019-04-18 12:42:45.859  INFO 8752 --- [RMI TCP Connection(10)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2019-04-18 12:42:45.859  INFO 8752 --- [RMI TCP Connection(10)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-04-18 12:42:45.860  INFO 8752 --- [RMI TCP Connection(10)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-04-18 12:42:45.860  INFO 8752 --- [RMI TCP Connection(10)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-04-18 12:43:13.505  INFO 11856 --- [main] com.kienp.DemoApplication                : Starting DemoApplication on A6118672 with PID 11856 (started by jm838d in C:\Users\jm838d\Documents\1. My Prj\MyToolkits\workflow)
+2019-04-18 12:43:13.522  INFO 11856 --- [main] com.kienp.DemoApplication                : No active profile set, falling back to default profiles: default
+2019-04-18 12:43:13.553  INFO 11856 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7ac296f6: startup date [Thu Apr 18 12:43:13 PDT 2019]; root of context hierarchy
+2019-04-18 12:43:14.171  INFO 11856 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$d1396107] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:43:14.203  INFO 11856 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$8a4df00b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-18 12:43:14.500  INFO 11856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-18 12:43:14.515  INFO 11856 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-18 12:43:14.515  INFO 11856 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-04-18 12:43:14.515  INFO 11856 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_111\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_111\jre\bin;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\ACD Systems\EN;C:\Program Files (x86)\Common Files\ACD Systems;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Git\cmd;C:\Program Files\Redis\;C:\Program Files (x86)\WebEx\PTools020000000;C:\Users\jm838d\AppData\Local\Microsoft\WindowsApps;C:\Users\jm838d\AppData\Local\GitHubDesktop\bin;C:\Setup\sts-bundle\sts-3.9.0.RELEASE;;.]
+2019-04-18 12:43:14.629  INFO 11856 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-18 12:43:14.638  INFO 11856 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1076 ms
+2019-04-18 12:43:14.702  INFO 11856 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-04-18 12:43:14.717  INFO 11856 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-18 12:43:14.717  INFO 11856 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-18 12:43:14.717  INFO 11856 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-18 12:43:14.717  INFO 11856 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-18 12:43:14.842  INFO 11856 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:43:15.046  INFO 11856 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7ac296f6: startup date [Thu Apr 18 12:43:13 PDT 2019]; root of context hierarchy
+2019-04-18 12:43:15.108  INFO 11856 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.kienp.sampleworkflow.Controller.index()
+2019-04-18 12:43:15.108  INFO 11856 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-18 12:43:15.108  INFO 11856 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-18 12:43:15.137  INFO 11856 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:43:15.137  INFO 11856 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-18 12:43:15.450  INFO 11856 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-04-18 12:43:15.466  INFO 11856 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2019-04-18 12:43:15.466  INFO 11856 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2019-04-18 12:43:15.481  INFO 11856 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-04-18 12:43:15.528  INFO 11856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-18 12:43:15.528  INFO 11856 --- [main] com.kienp.DemoApplication                : Started DemoApplication in 2.318 seconds (JVM running for 2.991)
+2019-04-18 12:43:19.087  INFO 11856 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-18 12:43:19.089  INFO 11856 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-18 12:43:19.107  INFO 11856 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2019-04-18 12:43:19.122  INFO 11856 --- [http-nio-8080-exec-3] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory(workflow=null)
+2019-04-18 12:43:19.122  INFO 11856 --- [http-nio-8080-exec-3] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:43:19.122  INFO 11856 --- [http-nio-8080-exec-3] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:43:21.477  INFO 11856 --- [http-nio-8080-exec-1] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory(workflow=null)
+2019-04-18 12:43:21.483  INFO 11856 --- [http-nio-8080-exec-1] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:43:21.483  INFO 11856 --- [http-nio-8080-exec-1] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
+2019-04-18 12:43:23.594  INFO 11856 --- [http-nio-8080-exec-2] com.kienp.workflow.AbstractFactory       : START Process request: AbstractFactory(workflow=null)
+2019-04-18 12:43:23.602  INFO 11856 --- [http-nio-8080-exec-2] com.kienp.sampleworkflow.FirstBuilder    : First builder: test 1-Test 3
+2019-04-18 12:43:23.602  INFO 11856 --- [http-nio-8080-exec-2] com.kienp.sampleworkflow.SecondBuilder   : Second builder: another thing
