@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.kienp</groupId>
-	<artifactId>corelib</artifactId>
+	<groupId>com.kientpham</groupId>
+	<artifactId>easyworkflow</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>corelib</name>
-	<description>Base web app to use workflow library</description>
+	<name>easylib</name>
+	<description>Zero if workflow library</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

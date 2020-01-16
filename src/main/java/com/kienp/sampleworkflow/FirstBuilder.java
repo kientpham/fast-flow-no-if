@@ -14,7 +14,7 @@ public class FirstBuilder implements BaseBuilder<OmnibusDTO>{
 	@Override
 	public void execute(OmnibusDTO omnibusDTO) throws WorkflowException {
 		log.info("First builder: "+omnibusDTO.getAnything());
-		omnibusDTO.setAnything("another thing");
+		omnibusDTO.setAnything("another thing");		
 	}
 
 }

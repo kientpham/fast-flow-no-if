@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Implementation-Title: corelib
+Implementation-Title: easylib
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: jm838d
-Implementation-Vendor-Id: com.kienp
-Build-Jdk: 1.8.0_162
+Built-By: trung
+Implementation-Vendor-Id: com.kientpham
+Build-Jdk: 1.8.0_131
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
- ot-starter-parent/corelib
+ ot-starter-parent/easyworkflow
 Created-By: Maven Integration for Eclipse
 
