@@ -6,7 +6,7 @@ import com.kienp.workflow.BaseTransactionManager;
 import com.kienp.workflow.WorkflowException;
 
 @Component
-public class TransactionManager implements BaseTransactionManager<TransactionModel, OmnibusDTO>{
+public class TransactionManager_Old implements BaseTransactionManager<TransactionModel, OmnibusDTO>{
 
 	@Override
 	public OmnibusDTO initiateOmnibusDTO(TransactionModel transaction) {

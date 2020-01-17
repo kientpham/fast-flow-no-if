@@ -9,12 +9,12 @@ import lombok.extern.log4j.Log4j2;
 
 @Log4j2
 @Component
-public class SecondBuilder implements BaseBuilder<OmnibusDTO>{
+public class FirstBuilder_Old implements BaseBuilder<OmnibusDTO>{
 
 	@Override
 	public void execute(OmnibusDTO omnibusDTO) throws WorkflowException {
-		 log.info("Second builder: "+omnibusDTO.getAnything());
-		
+		log.info("First builder: "+omnibusDTO.getAnything());
+		omnibusDTO.setAnything("another thing");		
 	}
 
 }
