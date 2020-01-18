@@ -1,7 +1,7 @@
 package com.kientpham.baseworkflow;
 
 /**
- * @author FPT Software
+ * @author trungkienbk@gmail.com
  *
  * @param <D>
  *            Generic OmnibusDTO.

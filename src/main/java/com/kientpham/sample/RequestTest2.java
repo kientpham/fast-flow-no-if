@@ -1,7 +1,6 @@
 package com.kientpham.sample;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +16,7 @@ public class RequestTest2 implements RequestHandlerBase<TransactionModel> {
 	private TestFactory testFactory;
 	
 	@Override
-	public List<TransactionModel> processListTransactions(List<?> inputParams) throws WorkflowException {
+	public List<TransactionModel> startProcessing(List<?> inputParams) throws WorkflowException {
 		List<TransactionModel> listTransactionModel = new ArrayList<TransactionModel>();
 		TransactionModel transaction = new TransactionModel();
 		transaction.setTransactionId("1");
@@ -33,11 +32,4 @@ public class RequestTest2 implements RequestHandlerBase<TransactionModel> {
 		listTransactionModel.add(transaction2);
 		return testFactory.startWorkflow(listTransactionModel);
 	}
-
-	@Override
-	public TransactionModel processTransaction(List<?> inputParams) throws WorkflowException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

@@ -19,10 +19,20 @@ public class MasterWorkflow<T, D> {
 
 	private List<BaseBuilder<T, D>> preExecuteBuilderList;
 
+	private List<BaseBuilder<T, D>> postExecuteBuilderList;
+
 	public void setPreExecuteBuilder(BaseBuilder<T, D> builder) {
 		if (preExecuteBuilderList == null)
 			preExecuteBuilderList = new ArrayList<BaseBuilder<T, D>>();
+
 		preExecuteBuilderList.add(builder);
+	}
+
+	public void setPostExecuteBuilder(BaseBuilder<T, D> builder) {
+		if (postExecuteBuilderList == null)
+			postExecuteBuilderList = new ArrayList<BaseBuilder<T, D>>();
+
+		postExecuteBuilderList.add(builder);
 	}
 
 	/**
@@ -57,41 +67,19 @@ public class MasterWorkflow<T, D> {
 	public List<T> executeWorkflow(List<T> transactionList, BaseOmnibusDTO<T, D> baseOmniBusDTO)
 			throws WorkflowException {
 		if (baseTransactionManager == null || builderList == null) {
-			throw new WorkflowException("Could not excute the work flow");
+			throw new WorkflowException("Missing Transacion Manager or Builder List.");
+		}
+		if (transactionList == null || transactionList.size() == 0) {
+			throw new WorkflowException("There is no transaction to process");
 		}
 		preExecute(baseOmniBusDTO);
-		execute(transactionList, baseOmniBusDTO);
+		if (transactionList.size() == 1) {
+			this.execute(transactionList.get(0), baseOmniBusDTO);
+		} else {
+			execute(transactionList, baseOmniBusDTO);
+		}
+		postExecute(baseOmniBusDTO);
 		return transactionList;
-	}
-
-	public T executeWorkflow(T transaction, BaseOmnibusDTO<T, D> baseOmniBusDTO) throws WorkflowException {
-		if (baseTransactionManager == null || builderList == null) {
-			throw new WorkflowException("Could not excute the work flow");
-		}
-		preExecute(baseOmniBusDTO);
-		execute(transaction, baseOmniBusDTO);
-		return transaction;
-	}
-
-	private void execute(List<T> transactionList, BaseOmnibusDTO<T, D> omniBusDTO) {
-		for (T transaction : transactionList) {
-			this.execute(transaction, omniBusDTO);
-		}
-	}
-
-	private void execute(T transaction, BaseOmnibusDTO<T, D> omniBusDTO) {
-
-		try {
-			omniBusDTO.setTransaction(transaction);
-			for (BaseBuilder<T, D> builder : builderList) {
-				builder.execute(omniBusDTO);
-			}
-		} catch (WorkflowException e) {
-			baseTransactionManager.updateTransactionWhenException(transaction, e);
-		} finally {
-			baseTransactionManager.saveTransaction(transaction);
-		}
-
 	}
 
 	private void preExecute(BaseOmnibusDTO<T, D> omniBusDTO) throws WorkflowException {
@@ -102,4 +90,30 @@ public class MasterWorkflow<T, D> {
 		}
 	}
 
+	private void execute(List<T> transactionList, BaseOmnibusDTO<T, D> omniBusDTO) {
+		for (T transaction : transactionList) {
+			this.execute(transaction, omniBusDTO);
+		}
+	}
+
+	private void execute(T transaction, BaseOmnibusDTO<T, D> omniBusDTO) {
+		try {
+			omniBusDTO.setTransaction(transaction);
+			for (BaseBuilder<T, D> builder : builderList) {
+				builder.execute(omniBusDTO);
+			}
+		} catch (WorkflowException e) {
+			baseTransactionManager.updateTransactionWhenException(transaction, e);
+		} finally {
+			baseTransactionManager.saveTransaction(transaction);
+		}
+	}
+
+	private void postExecute(BaseOmnibusDTO<T, D> omniBusDTO) throws WorkflowException {
+		if (postExecuteBuilderList != null) {
+			for (BaseBuilder<T, D> builder : postExecuteBuilderList) {
+				builder.execute(omniBusDTO);
+			}
+		}
+	}
 }

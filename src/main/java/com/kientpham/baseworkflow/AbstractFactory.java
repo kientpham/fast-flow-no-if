@@ -1,11 +1,9 @@
 package com.kientpham.baseworkflow;
 
-import java.util.Collections;
 import java.util.List;
 
-
 /**
- * @author FPT Software
+ * @author trungkienbk@gmail.com
  *
  * @param <T>
  *            Generic Transaction Model.
@@ -13,48 +11,23 @@ import java.util.List;
  *            Generic OmibusDTO.
  */
 
-public abstract class AbstractFactory<T,D> {
-	
-	protected MasterWorkflow<T,D> workflow ;	
+public abstract class AbstractFactory<T, D> {
 
-	protected abstract MasterWorkflow<T,D> initiateWorkflow();
-	
-	protected abstract BaseOmnibusDTO<T, D> initiateBaseOmnibusDTO() throws WorkflowException; 
+	protected MasterWorkflow<T, D> workflow;
 
-//	/**
-//	 * 
-//	 * @return message
-//	 */
-//	public List<T> processRequest(List<?> inputParams) {
-//		
-//		try {					
-//			workflow = this.initiateWorkflow();
-//			BaseOmnibusDTO<T,D> baseOmniBusDTO=this.initiateBaseOmnibusDTO();									
-//			return workflow.executeWorkflow(inputParams,baseOmniBusDTO);			
-//		} catch (WorkflowException e) {
-//			return null;
-//		}
-//	}
-	
+	protected abstract MasterWorkflow<T, D> initiateWorkflow();
+
+	protected abstract BaseOmnibusDTO<T, D> initiateBaseOmnibusDTO() throws WorkflowException;
+
 	public List<T> startWorkflow(List<T> transactions) {
-		
-		try {					
+
+		try {
 			workflow = this.initiateWorkflow();
-			BaseOmnibusDTO<T,D> baseOmniBusDTO=this.initiateBaseOmnibusDTO();									
-			return workflow.executeWorkflow(transactions,baseOmniBusDTO);			
+			BaseOmnibusDTO<T, D> baseOmniBusDTO = this.initiateBaseOmnibusDTO();
+			return workflow.executeWorkflow(transactions, baseOmniBusDTO);
 		} catch (WorkflowException e) {
 			return null;
 		}
 	}
-	
-	public T startWorkflow(T transaction) {
-		
-		try {					
-			workflow = this.initiateWorkflow();
-			BaseOmnibusDTO<T,D> baseOmniBusDTO=this.initiateBaseOmnibusDTO();									
-			return workflow.executeWorkflow(Collections.singletonList(transaction),baseOmniBusDTO).get(0);			
-		} catch (WorkflowException e) {
-			return null;
-		}
-	}
+
 }

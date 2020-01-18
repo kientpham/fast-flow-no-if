@@ -2,6 +2,12 @@ package com.kientpham.baseworkflow;
 
 import java.util.List;
 
+/**
+ * 
+ * @author trungkienbk@gmail.com
+ *
+ * @param <T>
+ */
 public interface RequestHandlerBase<T>
 {
   
@@ -9,8 +15,6 @@ public interface RequestHandlerBase<T>
    * @return
    * @throws WorkflowException
    */
-  public abstract List<T> processListTransactions(List<?> inputParams) throws WorkflowException;
-  
-  public abstract T processTransaction(List<?> inputParams) throws WorkflowException;  
+  public abstract List<T> startProcessing(List<?> inputParams) throws WorkflowException;    
 
 }

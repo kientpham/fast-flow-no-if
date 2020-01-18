@@ -26,7 +26,7 @@ public class Controller {
 		List<TransactionModel> transactionList;
 		StringBuilder sb = new StringBuilder();
 		try {
-			transactionList = requestTest2.processListTransactions(inputValues);
+			transactionList = requestTest2.startProcessing(inputValues);
 			
 			for (TransactionModel transaction : transactionList) {
 				sb.append(" " + transaction.getTransactionId());
@@ -45,7 +45,7 @@ public class Controller {
 		List<String> inputValues = Arrays.asList("test 1", "Test 3");
 		TransactionModel trans=new TransactionModel();
 		try {
-			trans=requestTest1.processTransaction(inputValues);			
+			trans=requestTest1.startProcessing(inputValues).get(0);			
 			
 		} catch (WorkflowException e) {
 			e.printStackTrace();

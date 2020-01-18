@@ -1,5 +1,12 @@
 package com.kientpham.baseworkflow;
 
+/**
+ * 
+ * @author trungkienbk@gmail.com
+ *
+ * @param <T>
+ * @param <D>
+ */
 public class BaseOmnibusDTO<T, D> {
 	
 	private T transaction;

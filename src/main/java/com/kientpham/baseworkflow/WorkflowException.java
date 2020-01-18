@@ -2,7 +2,7 @@ package com.kientpham.baseworkflow;
 
 /**
  * 
- * @author FPT Software
+ * @author trungkienbk@gmail.com
  *
  */
 public class WorkflowException extends Exception {
