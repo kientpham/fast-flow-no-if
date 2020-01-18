@@ -18,14 +18,15 @@ public class Controller {
 	@Autowired
 	private RequestTest2 requestTest2;
 
-	@RequestMapping("/")
+	@RequestMapping("/test2")
 	public String index() {
 
-		List<String> inputValues = Arrays.asList("test 1", "Test 3");
+		
+		List<String> inputValues = Arrays.asList("test 2");		
 		List<TransactionModel> transactionList;
 		StringBuilder sb = new StringBuilder();
 		try {
-			transactionList = requestTest1.processRequest(inputValues);
+			transactionList = requestTest2.processListTransactions(inputValues);
 			
 			for (TransactionModel transaction : transactionList) {
 				sb.append(" " + transaction.getTransactionId());
@@ -38,23 +39,19 @@ public class Controller {
 		return "Process Successfully transactionId:" + sb.toString();
 	}
 	
-	@RequestMapping("/test2")
+	@RequestMapping("/")
 	public String index1() {
 
-		List<String> inputValues = Arrays.asList("test 2");
-		List<TransactionModel> transactionList;
-		StringBuilder sb = new StringBuilder();
+		List<String> inputValues = Arrays.asList("test 1", "Test 3");
+		TransactionModel trans=new TransactionModel();
 		try {
-			transactionList = requestTest2.processRequest(inputValues);
+			trans=requestTest1.processTransaction(inputValues);			
 			
-			for (TransactionModel transaction : transactionList) {
-				sb.append(" " + transaction.getTransactionId());
-			}
 		} catch (WorkflowException e) {
 			e.printStackTrace();
 			return "There is error while processing: " + e.getMessage();
 		}
 
-		return "Process Successfully transactionId:" + sb.toString();
+		return "Process Successfully transactionId:" + trans.getTransactionId();
 	}
 }

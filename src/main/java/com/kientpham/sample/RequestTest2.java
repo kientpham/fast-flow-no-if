@@ -17,7 +17,7 @@ public class RequestTest2 implements RequestHandlerBase<TransactionModel> {
 	private TestFactory testFactory;
 	
 	@Override
-	public List<TransactionModel> processRequest(List<?> inputParams) throws WorkflowException {
+	public List<TransactionModel> processListTransactions(List<?> inputParams) throws WorkflowException {
 		List<TransactionModel> listTransactionModel = new ArrayList<TransactionModel>();
 		TransactionModel transaction = new TransactionModel();
 		transaction.setTransactionId("1");
@@ -32,6 +32,12 @@ public class RequestTest2 implements RequestHandlerBase<TransactionModel> {
 		transaction2.setErrorMessage("No error yet!");
 		listTransactionModel.add(transaction2);
 		return testFactory.startWorkflow(listTransactionModel);
+	}
+
+	@Override
+	public TransactionModel processTransaction(List<?> inputParams) throws WorkflowException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -14,8 +14,9 @@ public class FirstBuilder implements BaseBuilder<TransactionModel,SharedDTO>{
 
 	@Override
 	public void execute(BaseOmnibusDTO<TransactionModel, SharedDTO> omniBusDTO) throws WorkflowException {
-		log.info("First builder shared DTO:"+omniBusDTO.getSharedDTO().getAnything());
 		log.info("First builder transaction:"+omniBusDTO.getTransaction().getInputValue());
+		log.info("First builder shared DTO:"+omniBusDTO.getSharedDTO().getAnything());
+		
 		omniBusDTO.getSharedDTO().setAnything("set by builder 1");
 		
 		

@@ -16,13 +16,18 @@ public class RequestTest1 implements RequestHandlerBase<TransactionModel> {
 	private TestFactory testFactory;
 	
 	@Override
-	public List<TransactionModel> processRequest(List<?> inputParams) throws WorkflowException {
+	public List<TransactionModel> processListTransactions(List<?> inputParams) throws WorkflowException {
+		return null;
+	}
+
+	@Override
+	public TransactionModel processTransaction(List<?> inputParams) throws WorkflowException {
 		TransactionModel transaction = new TransactionModel();
 		transaction.setTransactionId("1");
 		transaction.setInputValue(inputParams.get(0).toString() + "-" + inputParams.get(1).toString());
 		transaction.setStatus("START");
 		transaction.setErrorMessage("No error yet!");		
-		return testFactory.startWorkflow(Collections.singletonList(transaction));
+		return testFactory.startWorkflow(transaction);
 	}
 
 }

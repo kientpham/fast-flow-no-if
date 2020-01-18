@@ -1,5 +1,6 @@
 package com.kientpham.baseworkflow;
 
+import java.util.Collections;
 import java.util.List;
 
 
@@ -41,6 +42,17 @@ public abstract class AbstractFactory<T,D> {
 			workflow = this.initiateWorkflow();
 			BaseOmnibusDTO<T,D> baseOmniBusDTO=this.initiateBaseOmnibusDTO();									
 			return workflow.executeWorkflow(transactions,baseOmniBusDTO);			
+		} catch (WorkflowException e) {
+			return null;
+		}
+	}
+	
+	public T startWorkflow(T transaction) {
+		
+		try {					
+			workflow = this.initiateWorkflow();
+			BaseOmnibusDTO<T,D> baseOmniBusDTO=this.initiateBaseOmnibusDTO();									
+			return workflow.executeWorkflow(Collections.singletonList(transaction),baseOmniBusDTO).get(0);			
 		} catch (WorkflowException e) {
 			return null;
 		}
