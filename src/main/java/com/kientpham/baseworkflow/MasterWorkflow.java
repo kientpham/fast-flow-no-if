@@ -3,6 +3,8 @@ package com.kientpham.baseworkflow;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.util.StopWatch;
+
 /**
  * @author trungkienbk@gmail.com
  *
@@ -66,20 +68,32 @@ public class MasterWorkflow<T, D> {
 	 */
 	public List<T> executeWorkflow(List<T> transactionList, BaseOmnibusDTO<T, D> baseOmniBusDTO)
 			throws WorkflowException {
+		StopWatch watch = new StopWatch();
+		watch.start();
+		checkConditions(transactionList);
+		preExecute(baseOmniBusDTO);
+		mainTransactionProcessing(transactionList, baseOmniBusDTO);
+		postExecute(baseOmniBusDTO);
+		watch.stop();
+		System.out.println("Total time: " + watch.getTotalTimeMillis());
+		return transactionList;
+	}
+
+	private void checkConditions(List<T> transactionList) throws WorkflowException {
 		if (baseTransactionManager == null || builderList == null) {
 			throw new WorkflowException("Missing Transacion Manager or Builder List.");
 		}
 		if (transactionList == null || transactionList.size() == 0) {
 			throw new WorkflowException("There is no transaction to process");
 		}
-		preExecute(baseOmniBusDTO);
+	}
+
+	private void mainTransactionProcessing(List<T> transactionList, BaseOmnibusDTO<T, D> baseOmniBusDTO) {
 		if (transactionList.size() == 1) {
 			this.execute(transactionList.get(0), baseOmniBusDTO);
 		} else {
-			execute(transactionList, baseOmniBusDTO);
+			transactionList.parallelStream().forEach(t -> execute(t, baseOmniBusDTO));
 		}
-		postExecute(baseOmniBusDTO);
-		return transactionList;
 	}
 
 	private void preExecute(BaseOmnibusDTO<T, D> omniBusDTO) throws WorkflowException {
@@ -90,17 +104,13 @@ public class MasterWorkflow<T, D> {
 		}
 	}
 
-	private void execute(List<T> transactionList, BaseOmnibusDTO<T, D> omniBusDTO) {
-		for (T transaction : transactionList) {
-			this.execute(transaction, omniBusDTO);
-		}
-	}
-
 	private void execute(T transaction, BaseOmnibusDTO<T, D> omniBusDTO) {
 		try {
-			omniBusDTO.setTransaction(transaction);
+			BaseOmnibusDTO<T, D> transOmniBusDTO = new BaseOmnibusDTO<T, D>();
+			transOmniBusDTO.setSharedDTO(omniBusDTO.getSharedDTO());
+			transOmniBusDTO.setTransaction(transaction);
 			for (BaseBuilder<T, D> builder : builderList) {
-				builder.execute(omniBusDTO);
+				builder.execute(transOmniBusDTO);
 			}
 		} catch (WorkflowException e) {
 			baseTransactionManager.updateTransactionWhenException(transaction, e);

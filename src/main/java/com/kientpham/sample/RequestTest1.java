@@ -21,8 +21,7 @@ public class RequestTest1 implements RequestHandlerBase<TransactionModel> {
 		transaction.setTransactionId("1");
 		transaction.setInputValue(inputParams.get(0).toString() + "-" + inputParams.get(1).toString());
 		transaction.setStatus("START");
-		transaction.setErrorMessage("No error yet!");
-		
+		transaction.setErrorMessage("No error yet!");	
 		return testFactory.startWorkflow(Collections.singletonList(transaction));
 	}
 	

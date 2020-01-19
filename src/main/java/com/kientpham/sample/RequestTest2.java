@@ -20,16 +20,38 @@ public class RequestTest2 implements RequestHandlerBase<TransactionModel> {
 		List<TransactionModel> listTransactionModel = new ArrayList<TransactionModel>();
 		TransactionModel transaction = new TransactionModel();
 		transaction.setTransactionId("1");
-		transaction.setInputValue(inputParams.get(0).toString() +" trans 1");
+		transaction.setInputValue(" trans 1");
 		transaction.setStatus("START");
 		transaction.setErrorMessage("No error yet!");
 		listTransactionModel.add(transaction);
 		TransactionModel transaction2 = new TransactionModel();
 		transaction2.setTransactionId("2");
-		transaction2.setInputValue(inputParams.get(0).toString() + " trans 2");
+		transaction2.setInputValue(" trans 2");
 		transaction2.setStatus("START");
-		transaction2.setErrorMessage("No error yet!");
+		transaction2.setErrorMessage("No error yet!");		
 		listTransactionModel.add(transaction2);
+		
+		TransactionModel transaction3 = new TransactionModel();
+		transaction3.setTransactionId("3");
+		transaction3.setInputValue(" trans 3");
+		transaction3.setStatus("START");
+		transaction3.setErrorMessage("No error yet!");		
+		listTransactionModel.add(transaction3);
+		
+		TransactionModel transaction4 = new TransactionModel();
+		transaction4.setTransactionId("4");
+		transaction4.setInputValue(" trans 4");
+		transaction4.setStatus("START");
+		transaction4.setErrorMessage("No error yet!");		
+		listTransactionModel.add(transaction4);
+		
+		TransactionModel transaction5 = new TransactionModel();
+		transaction5.setTransactionId("5");
+		transaction5.setInputValue(" trans 5");
+		transaction5.setStatus("START");
+		transaction5.setErrorMessage("No error yet!");		
+		listTransactionModel.add(transaction5);
+		
 		return testFactory.startWorkflow(listTransactionModel);
 	}
 }

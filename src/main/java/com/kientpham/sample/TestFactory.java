@@ -15,10 +15,13 @@ public class TestFactory extends AbstractFactory<TransactionModel, SharedDTO> {
 	private TransactionManager transactionManager;
 	
 	@Autowired
-	private FirstBuilder firstBuilder;
+	private Builder1 firstBuilder;
 
 	@Autowired
-	private SecondBuilder secondBuilder;
+	private Builder2 secondBuilder;
+	
+	@Autowired
+	private Builder3 thirdBuilder;
 
 	@Override
 	protected MasterWorkflow<TransactionModel, SharedDTO> initiateWorkflow() {
@@ -26,6 +29,7 @@ public class TestFactory extends AbstractFactory<TransactionModel, SharedDTO> {
 		workflow.setBaseTransactionManager(transactionManager);
 		workflow.setFirstBuilder(firstBuilder);
 		workflow.setNextBuilder(secondBuilder);
+		workflow.setNextBuilder(thirdBuilder);
 		return workflow;
 	}
 
