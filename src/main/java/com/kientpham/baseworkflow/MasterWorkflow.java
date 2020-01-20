@@ -19,20 +19,20 @@ public class MasterWorkflow<T, D> {
 
 	private BaseTransactionManager<T, D> baseTransactionManager;
 
-	private List<BaseBuilder<T, D>> preExecuteBuilderList;
+	private List<BaseBuilderPrePost<T, D>> preExecuteBuilderList;
 
-	private List<BaseBuilder<T, D>> postExecuteBuilderList;
+	private List<BaseBuilderPrePost<T, D>> postExecuteBuilderList;
 
-	public void setPreExecuteBuilder(BaseBuilder<T, D> builder) {
+	public void setPreExecuteBuilder(BaseBuilderPrePost<T, D> builder) {
 		if (preExecuteBuilderList == null)
-			preExecuteBuilderList = new ArrayList<BaseBuilder<T, D>>();
+			preExecuteBuilderList = new ArrayList<BaseBuilderPrePost<T, D>>();
 
 		preExecuteBuilderList.add(builder);
 	}
 
-	public void setPostExecuteBuilder(BaseBuilder<T, D> builder) {
+	public void setPostExecuteBuilder(BaseBuilderPrePost<T, D> builder) {
 		if (postExecuteBuilderList == null)
-			postExecuteBuilderList = new ArrayList<BaseBuilder<T, D>>();
+			postExecuteBuilderList = new ArrayList<BaseBuilderPrePost<T, D>>();
 
 		postExecuteBuilderList.add(builder);
 	}
@@ -71,9 +71,9 @@ public class MasterWorkflow<T, D> {
 		StopWatch watch = new StopWatch();
 		watch.start();
 		checkConditions(transactionList);
-		preExecute(baseOmniBusDTO);
+		preExecute(transactionList, baseOmniBusDTO);
 		mainTransactionProcessing(transactionList, baseOmniBusDTO);
-		postExecute(baseOmniBusDTO);
+		postExecute(transactionList, baseOmniBusDTO);
 		watch.stop();
 		System.out.println("Total time: " + watch.getTotalTimeMillis());
 		return transactionList;
@@ -96,10 +96,10 @@ public class MasterWorkflow<T, D> {
 		}
 	}
 
-	private void preExecute(BaseOmnibusDTO<T, D> omniBusDTO) throws WorkflowException {
+	private void preExecute(List<T> transactionList, BaseOmnibusDTO<T, D> omniBusDTO) throws WorkflowException {
 		if (preExecuteBuilderList != null) {
-			for (BaseBuilder<T, D> builder : preExecuteBuilderList) {
-				builder.execute(omniBusDTO);
+			for (BaseBuilderPrePost<T, D> builder : preExecuteBuilderList) {
+				builder.execute(transactionList, omniBusDTO);
 			}
 		}
 	}
@@ -119,10 +119,10 @@ public class MasterWorkflow<T, D> {
 		}
 	}
 
-	private void postExecute(BaseOmnibusDTO<T, D> omniBusDTO) throws WorkflowException {
+	private void postExecute(List<T> transactionList, BaseOmnibusDTO<T, D> omniBusDTO) throws WorkflowException {
 		if (postExecuteBuilderList != null) {
-			for (BaseBuilder<T, D> builder : postExecuteBuilderList) {
-				builder.execute(omniBusDTO);
+			for (BaseBuilderPrePost<T, D> builder : postExecuteBuilderList) {
+				builder.execute(transactionList, omniBusDTO);
 			}
 		}
 	}
