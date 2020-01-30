@@ -15,9 +15,11 @@ public class Builder1 implements BaseBuilder<TransactionModel,SharedDTO>{
 	@Override
 	public void execute(BaseOmnibusDTO<TransactionModel, SharedDTO> omniBusDTO) throws WorkflowException {
 		//omniBusDTO.getTransaction().setInputValue(omniBusDTO.getTransaction().getInputValue() + "More");
+		log.info("ShareDTO.getAnything():"+omniBusDTO.getSharedDTO().getAnything());
 		log.info("Execute builder 1 with transaction:"+omniBusDTO.getTransaction().getInputValue());
-		omniBusDTO.getSharedDTO().setAnything("builder 1");
-//		omniBusDTO.getTransaction().setInputValue("Changing 1 to 2");
+//		omniBusDTO.getSharedDTO().setAnything("builder 1");
+		omniBusDTO.getTransaction().setInputValue(omniBusDTO.getTransaction().getInputValue() + "X");
+		omniBusDTO.getSharedDTO().setAnything(omniBusDTO.getTransaction().getInputValue());
 //		log.info("First builder shared DTO:"+omniBusDTO.getSharedDTO().getAnything());
 		try {
 			Thread.sleep(2000);

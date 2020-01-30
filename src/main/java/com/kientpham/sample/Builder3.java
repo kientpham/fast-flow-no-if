@@ -1,5 +1,6 @@
 package com.kientpham.sample;
 
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import com.kientpham.baseworkflow.BaseBuilder;
@@ -10,8 +11,9 @@ import lombok.extern.log4j.Log4j2;
 
 @Log4j2
 @Component
-public class Builder3 implements BaseBuilder<TransactionModel,SharedDTO>{
+public class Builder3 implements BaseBuilder<TransactionModel,SharedDTO>, Runnable{
 
+	@Async
 	@Override
 	public void execute(BaseOmnibusDTO<TransactionModel, SharedDTO> omniBusDTO) throws WorkflowException {
 		log.info("Execute builder 3 with transaction:"+omniBusDTO.getTransaction().getInputValue());
@@ -23,6 +25,12 @@ public class Builder3 implements BaseBuilder<TransactionModel,SharedDTO>{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public void run() {
+		System.out.println("Inside : " + Thread.currentThread().getName());
+		
 	}
 
 }

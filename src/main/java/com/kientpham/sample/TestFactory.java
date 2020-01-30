@@ -15,6 +15,9 @@ public class TestFactory extends AbstractFactory<TransactionModel, SharedDTO> {
 	private TransactionManager transactionManager;
 	
 	@Autowired
+	private PreBuilder preBuilder;
+	
+	@Autowired
 	private Builder1 firstBuilder;
 
 	@Autowired
@@ -25,8 +28,9 @@ public class TestFactory extends AbstractFactory<TransactionModel, SharedDTO> {
 
 	@Override
 	protected MasterWorkflow<TransactionModel, SharedDTO> initiateWorkflow() {
-		workflow=new MasterWorkflow<TransactionModel, SharedDTO>();
+		workflow=new MasterWorkflow<TransactionModel, SharedDTO>();		
 		workflow.setBaseTransactionManager(transactionManager);
+		workflow.setPreExecuteBuilder(preBuilder);
 		workflow.setFirstBuilder(firstBuilder);
 		workflow.setNextBuilder(secondBuilder);
 		workflow.setNextBuilder(thirdBuilder);

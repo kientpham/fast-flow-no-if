@@ -109,7 +109,7 @@ public class MasterWorkflow<T, D> {
 			BaseOmnibusDTO<T, D> transOmniBusDTO = new BaseOmnibusDTO<T, D>();
 			transOmniBusDTO.setSharedDTO(omniBusDTO.getSharedDTO());
 			transOmniBusDTO.setTransaction(transaction);
-			for (BaseBuilder<T, D> builder : builderList) {
+			for (BaseBuilder<T, D> builder : builderList) {				
 				builder.execute(transOmniBusDTO);
 			}
 		} catch (WorkflowException e) {

@@ -17,7 +17,8 @@ public class Builder2 implements BaseBuilder<TransactionModel,SharedDTO>{
 		log.info("Execute builder 2 with transaction:"+omniBusDTO.getTransaction().getInputValue());
 		//log.info("Second builder shared DTO:"+omniBusDTO.getSharedDTO().getAnything());		
 		//omniBusDTO.getSharedDTO().setAnything("builder 2");
-		omniBusDTO.getSharedDTO().setAnything("builder 2: " +omniBusDTO.getTransaction().getInputValue());
+		omniBusDTO.getTransaction().setInputValue(omniBusDTO.getTransaction().getInputValue() + "X");
+		omniBusDTO.getSharedDTO().setAnything(omniBusDTO.getTransaction().getInputValue());
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {

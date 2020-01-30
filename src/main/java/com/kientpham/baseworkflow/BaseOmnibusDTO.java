@@ -1,7 +1,5 @@
 package com.kientpham.baseworkflow;
 
-import lombok.Synchronized;
-
 /**
  * 
  * @author trungkienbk@gmail.com
@@ -9,7 +7,6 @@ import lombok.Synchronized;
  * @param <T>
  * @param <D>
  */
-@SuppressWarnings("unchecked")
 public class BaseOmnibusDTO<T, D> {
 
 	private T transaction;
@@ -28,7 +25,7 @@ public class BaseOmnibusDTO<T, D> {
 		return sharedDTO;
 	}
 
-	public void setSharedDTO(D sharedDTO) {
+	public synchronized void setSharedDTO(D sharedDTO) {
 		this.sharedDTO = sharedDTO;
 	}
 }
