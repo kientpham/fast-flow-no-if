@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class Controller {
+public class ControllerOld {
 
 	@Autowired
-	private TestFactory testFactory;
+	private TestFactory_Old testFactory;
 	
-	@RequestMapping("/")
-	public String index() {
+	@RequestMapping("/old")
+	public String indexOld() {
 		
 		List<String> inputValues=Arrays.asList("test 1","Test 3");		
 		List<TransactionModel> transactionList=testFactory.processRequest(inputValues);

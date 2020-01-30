@@ -11,19 +11,19 @@ import com.kienp.workflow.MasterWorkflow;
 import com.kienp.workflow.WorkflowException;
 
 @Component
-public class TestFactory extends AbstractFactory<TransactionModel, OmnibusDTO> {
+public class TestFactory_Old extends AbstractFactory<TransactionModel, OmnibusDTO> {
 
 	@Autowired
 	private MasterWorkflow<TransactionModel, OmnibusDTO> sampleworkflow;
 	
 	@Autowired
-	private TransactionManager transactionManager;
+	private TransactionManager_Old transactionManager;
 
 	@Autowired
-	private FirstBuilder firstBuilder;
+	private FirstBuilder_Old firstBuilder;
 
 	@Autowired
-	private SecondBuilder secondBuilder;
+	private SecondBuilder_Old secondBuilder;
 
 	@Override
 	protected List<TransactionModel> getTransactionModel(List<?> inputList) throws WorkflowException {
